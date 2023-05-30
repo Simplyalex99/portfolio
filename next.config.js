@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
+const withYAML = require('next-yaml');
 const nextConfig = {
   reactStrictMode: true,
 };
 
-module.exports = nextConfig;
+module.exports = withYAML(nextConfig);
