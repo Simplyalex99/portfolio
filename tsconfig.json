@@ -16,10 +16,11 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
-      "@/*":["./*"],
-      "@/styles/*": ["./src/styles/*"]
+      "@/*": ["./*"],
+      "@/styles/*": ["./src/styles/*"],
+      "@/templates/*": ["./src/templates/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx","global.d.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "global.d.ts"],
   "exclude": ["node_modules"]
 }
