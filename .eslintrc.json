@@ -10,22 +10,31 @@
       "@typescript-eslint/parser": [".ts", ".tsx", ".js"]
     },
     "import/resolver": {
+      "alias": {
+        "extensions": [".js", ".jsx"],
+        "map": [
+          ["@components", "./components/index"],
+          ["@styles", "./styles"]
+        ]
+      },
       "typescript": {
         "alwaysTryTypes": true,
+
         "project": "./tsconfig.json"
       }
     }
   },
   "extends": [
+    "plugin:import/errors",
     "plugin:react/recommended",
     "airbnb",
     "plugin:@next/next/recommended",
-    "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:import/typescript",
     "plugin:prettier/recommended",
     "prettier",
-    "plugin:import/typescript"
+    "plugin:import/typescript",
+    "next"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -33,7 +42,8 @@
       "jsx": true
     },
     "ecmaVersion": "latest",
-    "sourceType": "module"
+    "sourceType": "module",
+    "tsconfigRootDir": "./"
   },
   "rules": {
     "react/prop-types": "off",
