@@ -21,3 +21,7 @@ export { GithubSVG } from './svg/social/Github';
 export { LinkedinSVG } from './svg/social/Linkedin';
 export { MediumSVG } from './svg/social/Medium';
 export { YoutubeSVG } from './svg/social/Youtube';
+export { Button } from './common/Button';
+export { Footer } from './common/Footer';
+export { Navbar } from './common/Navbar';
+export { SEO } from './common/SEO';
