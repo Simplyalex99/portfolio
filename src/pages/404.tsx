@@ -9,7 +9,7 @@ import {
 
 const NotFoundPage: NextPageWithLayout = () => {
   return (
-    <div className={pageNotFoundStyles.wrapper}>
+    <div className={`${pageNotFoundStyles.wrapper} wrapper`}>
       <section className={pageNotFoundStyles['error-illustration-wrapper']}>
         <PageNotFoundSVG />
       </section>
