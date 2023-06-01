@@ -1,0 +1,32 @@
+.footer-bg {
+  background-color: #ffffff;
+}
+.footer {
+  width: 100%;
+  display: flex;
+  .footer-wrapper {
+    margin: 2em auto;
+    text-align: center;
+    .footer-icons,
+    .footer-links {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      justify-content: center;
+
+      gap: 1em;
+    }
+    .footer-links {
+      margin-bottom: 1.5em;
+      .footer-link {
+        font-size: 0.9rem;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    .footer-copyright {
+      font-size: 0.7rem;
+      margin-bottom: 0;
+    }
+  }
+}
