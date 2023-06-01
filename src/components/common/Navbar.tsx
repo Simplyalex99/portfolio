@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Link, { LinkProps } from 'next/link';
-import '@/styles/globals.scss';
 import navbarStyles from '@/styles/components/Navbar.module.scss';
 import { HamburgerMenuSVG } from '../svg/common/HamburgerMenu';
 import { CloseSVG } from '../svg/common/Close';
@@ -19,8 +18,8 @@ export const NavItem = (props: NavItemProps & LinkProps) => {
 };
 
 export enum ActiveTabType {
-  HOME = Links.HOME_PATH,
-  ABOUT = Links.ABOUT_PATH,
+  HOME = 'HOME',
+  ABOUT = 'ABOUT',
   CONTACT = 'CONTACT',
 }
 
@@ -61,11 +60,8 @@ export const Navbar = () => {
           </div>
 
           <Link href={HOME_PATH}>
-            <button
-              type="button"
-              className={` black ${navbarStyles['custom-link']}`}
-            >
-              OpenReview
+            <button type="button" className={`${navbarStyles['custom-link']}`}>
+              MyPortfolio
             </button>
           </Link>
         </div>
@@ -119,17 +115,11 @@ export const Navbar = () => {
             </Link>
             <Link href={CONTACT_PATH}>
               <div
-                onClick={() => setActiveTab(ActiveTabType.CONTACT)}
                 role="presentation"
                 className={`${navbarStyles['nav-item-wrapper']}`}
               >
-                <button
-                  type="button"
-                  className={`${getIsActive(ActiveTabType.CONTACT)} ${
-                    navbarStyles['nav-item']
-                  }  `}
-                >
-                  <span> {ActiveTabType.CONTACT} </span>
+                <button type="button" className={navbarStyles.contact}>
+                  {ActiveTabType.CONTACT}
                 </button>
               </div>
             </Link>
