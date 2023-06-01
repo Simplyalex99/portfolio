@@ -14,7 +14,8 @@
         "extensions": [".js", ".jsx"],
         "map": [
           ["@components", "./components/index"],
-          ["@styles", "./styles"]
+          ["@styles", "./styles"],
+          ["@hook","./hooks/index"]
         ]
       },
       "typescript": {
