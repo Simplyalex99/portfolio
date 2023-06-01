@@ -21,7 +21,7 @@
       "@/styles/*": ["./src/styles/*"],
       "@/templates/*": ["./src/templates/*"],
       "@/components": ["./src/components/index"],
-      "@/hooks":["./src/hooks/index"]
+      "@/hooks": ["./src/hooks/index"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "global.d.ts"],

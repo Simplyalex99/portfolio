@@ -15,7 +15,7 @@
         "map": [
           ["@components", "./components/index"],
           ["@styles", "./styles"],
-          ["@hook","./hooks/index"]
+          ["@hook", "./hooks/index"]
         ]
       },
       "typescript": {
@@ -246,7 +246,7 @@
     "no-warning-comments": "error",
     "no-whitespace-before-property": "error",
     "nonblock-statement-body-position": "off",
-    "object-curly-newline": "error",
+    "object-curly-newline": ["error", { "multiline": true }],
     "object-curly-spacing": ["error", "always"],
     "object-property-newline": [
       "error",
