@@ -1,12 +1,3 @@
-:root {
-  --dark: #121518;
-  --white: white;
-  --black: black;
-  --purple: #602bf8;
-  --green: rgba(84, 214, 183, 1);
-  --dark-blue: #0d6efd;
-  --warm-blue: #0084ff;
-}
 html,
 body {
   padding: 0;
@@ -28,55 +19,6 @@ a {
   box-sizing: border-box;
 }
 
-.flex {
-  display: flex;
-}
-.black {
-  color: var(--black);
-}
-.dark {
-  color: var(--dark);
-}
-.white {
-  color: var(--white);
-}
-.purple-- {
-  color: var(--purple);
-}
-.green-- {
-  color: var(--green);
-}
-.warm-blue {
-  color: var(--warm-blue);
-}
-.dark-blue {
-  color: var(--dark-blue);
-}
-.dark-bg {
-  background: var(--dark);
-}
-.white-bg {
-  background: var(--white);
-}
-.purple-bg {
-  background: var(--purple) !important;
-}
-.black-bg {
-  background: var(--black);
-}
-.dark-blue-bg {
-  background: var(--dark-blue);
-}
-.warm-blue-bg {
-  background: var(--warm-blue) !important;
-}
-.dark-gradient-bg {
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.45) 0%,
-    rgba(0, 0, 0, 0.0225) 100%
-  );
-}
 .text-center {
   text-align: center;
 }
