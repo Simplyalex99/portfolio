@@ -1,11 +1,14 @@
 .navbar-bg {
   z-index: 900;
-  height: 80px;
+  height: auto;
+  padding-top: 1.4em;
+  padding-bottom: 1.4em;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 998;
+  background-color: white;
 }
 #menu-wrapper {
   .menu-icon {
@@ -27,6 +30,8 @@
   margin-top: 0 !important;
   margin-bottom: 0 !important;
   height: 100%;
+  display: flex;
+  align-items: center;
 
   .custom-link-wrapper {
     text-align: center;
@@ -54,6 +59,7 @@
     padding: 0;
     background: none;
     border: none;
+    cursor: pointer;
     display: none;
   }
 
@@ -66,7 +72,7 @@
     right: 0;
     z-index: 999;
     text-transform: uppercase;
-
+    background-color: white;
     transition: transform 0.5s ease-in-out;
 
     .close-icon-wrapper {
@@ -76,11 +82,10 @@
 
       .close-icon {
         position: absolute;
-                path {
+        path {
           stroke: #000000 !important;
         }
       }
-
     }
     .links-wrapper {
       display: flex;
@@ -90,13 +95,24 @@
       height: 100%;
       text-align: center;
 
-     
       .nav-item-wrapper {
         margin-bottom: 2em;
         .nav-item {
           border: none;
           background: none;
           font-size: 1.3rem;
+          padding: 12px 10px 12px 10px;
+        }
+        .contact {
+          background-color: black;
+          color: white;
+          display: inline-block;
+          align-self: center;
+          padding: 12px 15px 12px 15px;
+          font-size: 1.3rem;
+          border: none;
+          margin-left: 0;
+          cursor: pointer;
         }
         .active-tab {
           font-weight: bold;
@@ -110,7 +126,6 @@
       }
     }
   }
-
 }
 .open-nav {
   transform: translateX(0%) !important;
@@ -147,6 +162,7 @@
       background: none;
       width: auto;
       height: auto;
+
       transform: translateX(0);
       text-align: right;
       .close-icon-wrapper {
@@ -159,8 +175,9 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
+        height: auto;
 
-       
         .nav-item-wrapper {
           margin-left: 1.5em;
           margin-bottom: 0;
@@ -168,6 +185,11 @@
           justify-content: center;
           button {
             padding: 0;
+          }
+          .contact {
+            align-self: center;
+            justify-self: center;
+            font-size: 0.8rem;
           }
           .nav-item {
             span {
