@@ -4,8 +4,11 @@
 .footer {
   width: 100%;
   display: flex;
+  position: relative;
+  z-index: 2;
   .footer-wrapper {
     margin: 2em auto;
+    margin-top: 0.5em;
     text-align: center;
     .footer-icons,
     .footer-links {
@@ -13,7 +16,7 @@
       grid-template-columns: repeat(3, 1fr);
       justify-content: center;
 
-      gap: 1em;
+      gap: 2em;
     }
     .footer-links {
       margin-bottom: 1.5em;

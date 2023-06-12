@@ -20,12 +20,14 @@
     cursor: pointer;
   }
   .page-link-dark-mode {
-    border: 1px solid #2f343c;
+    border: 1px solid #0084ff;
     background-color: transparent;
+    color: #0084ff;
   }
   .page-link-light-mode {
     border: 1px solid #dee2e6;
     background-color: #ffffff;
+    color: #0084ff;
   }
 
   .page-link:first-child {
@@ -42,11 +44,6 @@
     margin-left: -1px;
   }
 
-  .page-link-dark-mode:hover,
-  .page-link-dark-mode:focus {
-    background-color: #131518;
-    color: #0084ff;
-  }
   .page-link-light-mode:hover,
   .page-link-light-mode:focus {
     color: #0a58ca;

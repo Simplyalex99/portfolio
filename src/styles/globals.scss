@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&family=Poppins:wght@100;300;400;500&display=swap');
 html,
 body {
   padding: 0;
@@ -26,8 +27,8 @@ a {
   margin: 8em 2em 0em 2em;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 900px) {
   .wrapper {
-    margin: 8em 10em 0em 10em;
+    margin: 8em 3em 0em 3em;
   }
 }
