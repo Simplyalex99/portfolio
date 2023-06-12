@@ -10,13 +10,15 @@ type ButtonProps = {
 export const Button = ({
   children,
   className,
+  type = 'button',
   ...props
 }: ButtonProps & React.HTMLProps<HTMLButtonElement>) => {
   return (
     <button
+      // eslint-disable-next-line react/button-has-type
+      type={type}
       className={` ${buttonStyles.btn} ${className}`}
       {...props}
-      type="button"
     >
       {children}
     </button>
