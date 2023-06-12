@@ -6,7 +6,7 @@ export const MediumSVG: React.FC<React.SVGProps<SVGSVGElement>> = (props) => {
       width="45"
       height="45"
       viewBox="0 0 45 45"
-      fill="none"
+      fill="black"
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
