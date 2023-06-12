@@ -118,8 +118,11 @@ export const Navbar = () => {
                 role="presentation"
                 className={`${navbarStyles['nav-item-wrapper']}`}
               >
-                <button type="button" className={navbarStyles.contact}>
-                  {ActiveTabType.CONTACT}
+                <button
+                  type="button"
+                  className={`${navbarStyles['nav-item']} ${navbarStyles.contact}`}
+                >
+                  <span> {ActiveTabType.CONTACT}</span>
                 </button>
               </div>
             </Link>
