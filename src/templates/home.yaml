@@ -1,20 +1,21 @@
 heroSection:
-  heading: Beautiful and Scalable
+  heading: Beautifully  Scalable
   subheading: I am Alex
 skillSection:
   description: I love to learn new technologies and make an impact with what I learn and build.
   content:
-    - title: Machine Learning,
+    - title: Machine Learning
       description: I can build and deploy machine learning models from supervised, and unsupervised models and natural language processing
-
-    - title: UI/UX,
+      imageUrl: /machine-learning.png
+    - title: UI/UX
       description: I am familiar with design principles such as whitespace color and contrast and typography.
-
-    - title: Frontend,
+      imageUrl: /adobe.png
+    - title: Frontend
       description: I can implement mock-up designs to code, and have knowledge of front-end/back-end technologies and responsive design.
-
-    - title: Software Design,
+      imageUrl: /ph-code.png
+    - title: Software Design
       description: I have a good understanding of software best practices and tools to make scalable websites.
+      imageUrl: /build.png
 projectSection:
   content:
     - title: OpenReview
@@ -22,8 +23,14 @@ projectSection:
         A dashboard app designed to help businesses save time and make decisions with the help of machine learning 
         and natural language processing. The app identifies local competitors, predicts the sucess of the businesses
         and provides sentimental analysis of customer reviews and more.
+      imageUrl: openreview_project.png
+      linkUrl: https://github.com/Simplyalex99/OpenReview
+      type: Website
     - title: GPA Calculator
       description: >
         A Google Chrome extension app that automatiaclly calculates students' GPA at York University. This app
         saves students lots of time as currently there is no way to caclulate one's culmative,sessional, and specific
         department GPA without manually inputting all the required fields which is tedious when there are so many courses.
+      imageUrl: eecs_project.png
+      linkUrl: https://github.com/Simplyalex99/EECSCalculator
+      type: Chrome extension
