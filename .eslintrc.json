@@ -1,5 +1,5 @@
 {
-  "plugins": ["react", "@typescript-eslint", "prettier", "import"],
+  "plugins": ["react", "@typescript-eslint", "prettier"],
 
   "env": {
     "browser": true,
@@ -15,7 +15,8 @@
         "map": [
           ["@components", "./components/index"],
           ["@styles", "./styles"],
-          ["@hook", "./hooks/index"]
+          ["@hook", "./hooks/index"],
+          ["@utils", "./utils/getPaginationHelper"]
         ]
       },
       "typescript": {
@@ -47,6 +48,7 @@
     "tsconfigRootDir": "./"
   },
   "rules": {
+    "react/jsx-key": ["error", { "checkFragmentShorthand": false }],
     "react/prop-types": "off",
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": ["error"],
@@ -135,6 +137,22 @@
       }
     ],
     "jsx-quotes": "error",
+    "jsx-a11y/label-has-associated-control": [
+      "error",
+      {
+        "required": {
+          "some": ["nesting", "id"]
+        }
+      }
+    ],
+    "jsx-a11y/label-has-for": [
+      "error",
+      {
+        "required": {
+          "some": ["nesting", "id"]
+        }
+      }
+    ],
     "key-spacing": ["error"],
     "keyword-spacing": "off",
     "line-comment-position": "off",
