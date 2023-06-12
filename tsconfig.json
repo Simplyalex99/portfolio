@@ -21,7 +21,8 @@
       "@/styles/*": ["./src/styles/*"],
       "@/templates/*": ["./src/templates/*"],
       "@/components": ["./src/components/index"],
-      "@/hooks": ["./src/hooks/index"]
+      "@/hooks": ["./src/hooks/index"],
+      "@/utils": ["./src/utils/getPaginationHelper"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "global.d.ts"],
