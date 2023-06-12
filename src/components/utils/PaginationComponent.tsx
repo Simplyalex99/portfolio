@@ -26,7 +26,7 @@ type ButtonProps = {
   children: React.ReactNode;
   className?: string;
 };
-const Button = ({
+const ButtonLight = ({
   onClick,
   disabled,
   children,
@@ -34,7 +34,11 @@ const Button = ({
 }: PageLinkProps & ButtonProps) => {
   return (
     <button
-      className={`${paginationStyles['page-link']} ${className} `}
+      className={`${
+        paginationStyles['page-link']
+      } ${className} ${'dark-blue'} ${
+        paginationStyles['page-link-light-mode']
+      }`}
       type="button"
       onClick={onClick}
       disabled={disabled}
@@ -43,11 +47,29 @@ const Button = ({
     </button>
   );
 };
+const ButtonDark = ({
+  onClick,
+  disabled,
+  children,
+  className,
+}: PageLinkProps & ButtonProps) => {
+  return (
+    <button
+      className={`${paginationStyles['page-link']} ${className} ${paginationStyles['page-link-dark-mode']}`}
+      type="button"
+      onClick={onClick}
+      disabled={disabled}
+    >
+      {children}
+    </button>
+  );
+};
+
 const PageDark = (props: any) => {
   const { isActive, onClick, disabled, value } = props as PageProps;
 
   return (
-    <Button
+    <ButtonDark
       onClick={onClick}
       disabled={disabled}
       className={`${paginationStyles['page-link-dark-mode']} ${
@@ -59,14 +81,14 @@ const PageDark = (props: any) => {
       } `}
     >
       {value}
-    </Button>
+    </ButtonDark>
   );
 };
 const PageLight = (props: any) => {
   const { isActive, onClick, disabled, value } = props as PageProps;
 
   return (
-    <Button
+    <ButtonLight
       onClick={onClick}
       disabled={disabled}
       className={`${paginationStyles['page-link-light-mode']} ${
@@ -78,73 +100,118 @@ const PageLight = (props: any) => {
       } `}
     >
       {value}
-    </Button>
+    </ButtonLight>
   );
 };
 
-const Ellipsis = (props: any) => {
+const EllipsisLight = (props: any) => {
   const { onClick, disabled } = props as EllipsisProps;
   return (
-    <Button onClick={onClick} disabled={disabled}>
+    <ButtonLight onClick={onClick} disabled={disabled}>
       ...
-    </Button>
+    </ButtonLight>
   );
 };
 
-const FirstPageLink = (props: any) => {
+const FirstPageLinkLight = (props: any) => {
   const { onClick, disabled } = props as PageLinkProps;
   return (
-    <Button onClick={onClick} disabled={disabled}>
+    <ButtonLight onClick={onClick} disabled={disabled}>
       First
-    </Button>
+    </ButtonLight>
   );
 };
 
-const PreviousPageLink = (props: any) => {
+const PreviousPageLinkLight = (props: any) => {
   const { onClick, disabled } = props as PageLinkProps;
   return (
-    <Button onClick={onClick} disabled={disabled}>
+    <ButtonLight onClick={onClick} disabled={disabled}>
       Previous
-    </Button>
+    </ButtonLight>
   );
 };
 
-const NextPageLink = (props: any) => {
+const NextPageLinkLight = (props: any) => {
   const { onClick, disabled } = props as PageLinkProps;
   return (
-    <Button onClick={onClick} disabled={disabled}>
+    <ButtonLight onClick={onClick} disabled={disabled}>
       Next
-    </Button>
+    </ButtonLight>
   );
 };
 
-const LastPageLink = (props: any) => {
+const LastPageLinkLight = (props: any) => {
   const { onClick, disabled } = props as PageLinkProps;
   return (
-    <Button onClick={onClick} disabled={disabled}>
+    <ButtonLight onClick={onClick} disabled={disabled}>
       Last
-    </Button>
+    </ButtonLight>
+  );
+};
+const EllipsisDark = (props: any) => {
+  const { onClick, disabled } = props as EllipsisProps;
+  return (
+    <ButtonDark onClick={onClick} disabled={disabled}>
+      ...
+    </ButtonDark>
   );
 };
 
+const FirstPageLinkDark = (props: any) => {
+  const { onClick, disabled } = props as PageLinkProps;
+  return (
+    <ButtonDark onClick={onClick} disabled={disabled}>
+      First
+    </ButtonDark>
+  );
+};
+
+const PreviousPageLinkDark = (props: any) => {
+  const { onClick, disabled } = props as PageLinkProps;
+  return (
+    <ButtonDark onClick={onClick} disabled={disabled}>
+      Previous
+    </ButtonDark>
+  );
+};
+
+const NextPageLinkDark = (props: any) => {
+  const { onClick, disabled } = props as PageLinkProps;
+  return (
+    <ButtonDark onClick={onClick} disabled={disabled}>
+      Next
+    </ButtonDark>
+  );
+};
+
+const LastPageLinkDark = (props: any) => {
+  const { onClick, disabled } = props as PageLinkProps;
+  return (
+    <ButtonDark onClick={onClick} disabled={disabled}>
+      Last
+    </ButtonDark>
+  );
+};
 const Wrapper = (props: WrapperProps) => {
   const { children } = props;
   return <div className={paginationStyles.pagination}>{children}</div>;
 };
-const itemTypeToComponent = {
-  ELLIPSIS: Ellipsis,
-  FIRST_PAGE_LINK: FirstPageLink,
-  PREVIOUS_PAGE_LINK: PreviousPageLink,
-  NEXT_PAGE_LINK: NextPageLink,
-  LAST_PAGE_LINK: LastPageLink,
-};
+
 const itemTypeToComponentDark = {
   PAGE: PageDark,
-  ...itemTypeToComponent,
+  ELLIPSIS: EllipsisDark,
+  FIRST_PAGE_LINK: FirstPageLinkDark,
+  PREVIOUS_PAGE_LINK: PreviousPageLinkDark,
+  NEXT_PAGE_LINK: NextPageLinkDark,
+  LAST_PAGE_LINK: LastPageLinkDark,
 };
 const itemTypeToComponentLight = {
   PAGE: PageLight,
-  ...itemTypeToComponent,
+  ELLIPSIS: EllipsisLight,
+  FIRST_PAGE_LINK: FirstPageLinkLight,
+  PREVIOUS_PAGE_LINK: PreviousPageLinkLight,
+  NEXT_PAGE_LINK: NextPageLinkLight,
+  LAST_PAGE_LINK: LastPageLinkLight,
 };
 
 const UltimatePagination = createUltimatePagination({
