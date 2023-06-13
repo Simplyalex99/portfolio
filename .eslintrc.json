@@ -1,35 +1,42 @@
 {
-  "plugins": ["react", "@typescript-eslint", "prettier", "import"],
- 
+  "plugins": ["react", "@typescript-eslint", "prettier"],
+
   "env": {
     "browser": true,
     "es2021": true
   },
   "settings": {
     "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".tsx"]
+      "@typescript-eslint/parser": [".ts", ".tsx", ".js"]
     },
     "import/resolver": {
+      "alias": {
+        "extensions": [".js", ".jsx"],
+        "map": [
+          ["@components", "./components/index"],
+          ["@styles", "./styles"],
+          ["@hook", "./hooks/index"],
+          ["@utils", "./utils/getPaginationHelper"]
+        ]
+      },
       "typescript": {
-        "alwaysTryTypes": true, // always try to resolve types under `<root>@types` directory even it doesn't contain any source code, like `@types/unist`
+        "alwaysTryTypes": true,
 
-        // Choose from one of the "project" configs below or omit to use <root>/tsconfig.json by default
-
-        // use <root>/path/to/folder/tsconfig.json
         "project": "./tsconfig.json"
       }
     }
   },
   "extends": [
+    "plugin:import/errors",
     "plugin:react/recommended",
     "airbnb",
     "plugin:@next/next/recommended",
-    "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:import/typescript",
     "plugin:prettier/recommended",
     "prettier",
-    "plugin:import/typescript"
+    "plugin:import/typescript",
+    "next"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -38,10 +45,10 @@
     },
     "ecmaVersion": "latest",
     "sourceType": "module",
-    "project": "./tsconfig.json",
     "tsconfigRootDir": "./"
   },
   "rules": {
+    "react/jsx-key": ["error", { "checkFragmentShorthand": false }],
     "react/prop-types": "off",
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": ["error"],
@@ -130,6 +137,22 @@
       }
     ],
     "jsx-quotes": "error",
+    "jsx-a11y/label-has-associated-control": [
+      "error",
+      {
+        "required": {
+          "some": ["nesting", "id"]
+        }
+      }
+    ],
+    "jsx-a11y/label-has-for": [
+      "error",
+      {
+        "required": {
+          "some": ["nesting", "id"]
+        }
+      }
+    ],
     "key-spacing": ["error"],
     "keyword-spacing": "off",
     "line-comment-position": "off",
@@ -241,7 +264,7 @@
     "no-warning-comments": "error",
     "no-whitespace-before-property": "error",
     "nonblock-statement-body-position": "off",
-    "object-curly-newline": "error",
+    "object-curly-newline": ["error", { "multiline": true }],
     "object-curly-spacing": ["error", "always"],
     "object-property-newline": [
       "error",
