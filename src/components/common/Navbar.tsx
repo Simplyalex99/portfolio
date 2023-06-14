@@ -49,11 +49,11 @@ export const Navbar = () => {
             id="menu-wrapper"
             role="presentation"
             className={` 
-                ${navbarStyles['menu-wrapper-white']}
+                ${navbarStyles['menu-wrapper']}
             }`}
           >
             <HamburgerMenuSVG
-              className={`${navbarStyles['menu-icon']} black `}
+              className={`${navbarStyles['menu-icon']}  `}
               width="35"
               height="35"
             />

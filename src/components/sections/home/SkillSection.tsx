@@ -31,7 +31,7 @@ export const SkillSection = () => {
   };
   return (
     <section className={`${homeStyles['skill-section']}`}>
-      <div className={`wrapper ${homeStyles['content-wrapper']}`}>
+      <div className={` ${homeStyles['content-wrapper']} wrapper`}>
         <div className={homeStyles['title-wrapper']}>
           <h2>Skills</h2>
           <span className={homeStyles['accent-svg']}>
@@ -41,7 +41,7 @@ export const SkillSection = () => {
         <p className={homeStyles['skill-description']}>
           {skillSection.description}
         </p>
-        <div className={homeStyles.pagination}>
+        <div className={homeStyles['pagination-wrapper']}>
           {filterData.map((content) => {
             const url = content.imageUrl;
             return (
@@ -62,15 +62,36 @@ export const SkillSection = () => {
               </>
             );
           })}
-          <PaginationDarkTheme
-            hideFirstAndLastPageLinks
-            totalPages={maxPages}
-            currentPage={currentPage}
-            onChange={pageHandler}
-          />
+          <div className={homeStyles.pagination}>
+            <PaginationDarkTheme
+              hideFirstAndLastPageLinks
+              totalPages={maxPages}
+              currentPage={currentPage}
+              onChange={pageHandler}
+            />
+          </div>
+        </div>
+        <div className={homeStyles.content}>
+          {skillContent.map((content) => {
+            const url = content.imageUrl;
+            return (
+              <div key={content.title} className={homeStyles['content-item']}>
+                <div className={homeStyles.icon}>
+                  <Image
+                    src={url}
+                    alt="code"
+                    objectFit="cover"
+                    width={35}
+                    height={35}
+                  />
+                </div>
+                <h3 className={homeStyles.title}>{content.title}</h3>
+                <p className={homeStyles.text}>{content.description}</p>
+              </div>
+            );
+          })}
         </div>
 
-        <div className={homeStyles.content} />
         <div className={homeStyles['icons-wrapper']}>
           <ReactSVG />
           <GithubSVG />
