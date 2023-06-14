@@ -25,13 +25,6 @@ export const Footer = () => {
             <p className={FooterStyles['footer-link']}>GitHub</p>
           </Link>
         </div>
-        <p
-          className={`${FooterStyles['footer-copyright']} 
-             black
-          `}
-        >
-          © 2023 Alex
-        </p>
       </div>
     </footer>
   );
