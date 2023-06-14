@@ -5,7 +5,6 @@ export const SmallAbstractSVG: React.FC<React.SVGProps<SVGSVGElement>> = (
 ) => {
   return (
     <svg
-      viewBox="0 0 218 216"
       width="254"
       height="270"
       viewBox="0 0 254 270"
