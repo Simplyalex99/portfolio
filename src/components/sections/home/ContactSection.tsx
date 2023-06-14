@@ -7,6 +7,8 @@ import { DownLeftArrowSVG } from '../../svg/arrows/DownLeftArrow';
 import { MediumSVG } from '../../svg/social/Medium';
 import { LinkedinSVG } from '../../svg/social/Linkedin';
 import { GithubSVG } from '../../svg/social/Github';
+import { SmallAbstractSVG } from '../../svg/others/SmallAbstract';
+import { LargeAbstractSVG } from '../../svg/others/LargeAbstract';
 
 type ErrorFieldProps = {
   fieldName: string;
@@ -26,6 +28,12 @@ export const ContactSection = () => {
   const { MEDIUM_LINK, GITHUB_LINK, LINKEDIN_LINK } = Links;
   return (
     <section className={`${homeStyles['contact-section']} wrapper`}>
+      <div className={homeStyles['blob-sm-wrapper']}>
+        <SmallAbstractSVG />
+      </div>
+      <div className={homeStyles['blob-lg-wrapper']}>
+        <LargeAbstractSVG />
+      </div>
       <h2 className={homeStyles['contact-heading']}>Contact Me</h2>
       <div>
         <form
@@ -87,7 +95,7 @@ export const ContactSection = () => {
             <LinkedinSVG />
           </Link>
           <Link href={GITHUB_LINK} className={homeStyles.icon}>
-            <GithubSVG className={homeStyles['github-icon']} />
+            <GithubSVG />
           </Link>
         </div>
       </div>
