@@ -16,14 +16,16 @@ import { useScrollAnimation, useParallax } from '@/hooks';
 
 export const Home = () => {
   const { heroSection } = yaml;
+  const svgId = 'scroll-svg';
+  const lineArtPathId = 'scroll-line';
   const ref = useRef<HTMLDivElement>(null);
   useParallax();
-  useScrollAnimation();
+  useScrollAnimation(svgId, lineArtPathId);
   return (
     <>
       <SEO title="My Portfolio" />
       <div className={homeStyles['line-container']}>
-        <LineArtSVG preserveAspectRatio="xMidyMid meet" />
+        <LineArtSVG preserveAspectRatio="xMidYMid meet" id={svgId} />
       </div>
       <div className={`${homeStyles['hero-img-wrapper']}`}>
         <div className={homeStyles['hero-img-accent']}>
