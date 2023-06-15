@@ -94,7 +94,9 @@ export const SkillSection = () => {
 
         <div className={homeStyles['icons-wrapper']}>
           <ReactSVG />
-          <GithubSVG />
+          <div className={homeStyles['github-icon']}>
+            <GithubSVG />
+          </div>
           <HtmlSVG />
           <DockerSVG />
           <CssSVG />
