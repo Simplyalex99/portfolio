@@ -6,16 +6,16 @@ skillSection:
   content:
     - title: Machine Learning
       description: I can build and deploy machine learning models from supervised, and unsupervised models and natural language processing
-      imageUrl: /machine-learning-model.png
+      imageUrl: /machine-learning.png
     - title: UI/UX
       description: I am familiar with design principles such as whitespace color and contrast and typography.
-      imageUrl: /adobe-design-outline.png
+      imageUrl: /adobe-design.png
     - title: Frontend
       description: I can implement mock-up designs to code, and have knowledge of front-end/back-end technologies and responsive design.
-      imageUrl: /ph-code-bold.png
+      imageUrl: /php-code-bold.png
     - title: Software Design
       description: I have a good understanding of software best practices and tools to make scalable websites.
-      imageUrl: /material-build.png
+      imageUrl: /material-build-icon.png
 projectSection:
   content:
     - title: OpenReview
