@@ -11,6 +11,7 @@ import {
   LineArtSVG,
   SkillSection,
   ProjectSection,
+  MediumAbstractSVG,
 } from '@/components';
 import { useScrollAnimation, useParallax } from '@/hooks';
 
@@ -40,6 +41,9 @@ export const Home = () => {
         />
       </div>
       <div className={`${homeStyles.wrapper}`}>
+        <div className={homeStyles['medium-blob']}>
+          <MediumAbstractSVG />
+        </div>
         <section className={`${homeStyles.hero} wrapper`} ref={ref}>
           <h1
             className={` ${homeStyles['hero-content']} scroll`}
