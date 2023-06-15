@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useState, useRef } from 'react';
 import Link from 'next/link';
 import { Canvas } from '@react-three/fiber';
@@ -35,7 +36,7 @@ export const ProjectSection = () => {
   const pageHandler = (page: number) => {
     setCurrentPage(page);
   };
-
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const onPointerEnterHandler = () => {
     if (cameraControlRef.current) {
       cameraControlRef.current.enabled = true;
@@ -47,6 +48,7 @@ export const ProjectSection = () => {
       }
     }, 300);
   };
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const onPointerLeaveHandler = () => {
     if (cameraControlRef.current) {
       cameraControlRef.current.enabled = true;
@@ -89,13 +91,9 @@ export const ProjectSection = () => {
               <h2>{data.title}</h2>
             </div>
             <div className={homeStyles.webgl}>
-              <Canvas
-                className={homeStyles.canvas}
-                camera={camera}
-                onPointerLeave={onPointerLeaveHandler}
-              >
-                <CameraControls ref={cameraControlRef} />
-                <mesh onPointerEnter={onPointerEnterHandler} scale={[2, 2, 1]}>
+              <Canvas className={homeStyles.canvas} camera={camera}>
+                {/* <CameraControls ref={cameraControlRef} /> */}
+                <mesh scale={[2, 2, 1]}>
                   <planeBufferGeometry args={[3, 3 * 0.75]} />
                   <meshBasicMaterial map={map} toneMapped={false} />
                 </mesh>
