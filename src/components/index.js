@@ -19,6 +19,7 @@ export { PhpSVG } from './svg/others/Php';
 export { ScrollSVG } from './svg/others/Scroll';
 export { SquaresSVG } from './svg/others/Squares';
 export { SmallAbstractSVG } from './svg/others/SmallAbstract';
+export { MediumAbstractSVG } from './svg/others/MediumAbstract';
 export { ToolKitSVG } from './svg/others/ToolKit';
 export { GithubSVG } from './svg/social/Github';
 export { LineArtSVG } from './svg/others/LineArt';
