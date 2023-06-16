@@ -90,33 +90,35 @@ export const ProjectSection = () => {
               <h3>/Projects</h3>
               <h2>{data.title}</h2>
             </div>
-            <div className={homeStyles.webgl}>
-              <Canvas className={homeStyles.canvas} camera={camera}>
-                {/* <CameraControls ref={cameraControlRef} /> */}
-                <mesh scale={[2, 2, 1]}>
-                  <planeBufferGeometry args={[3, 3 * 0.75]} />
-                  <meshBasicMaterial map={map} toneMapped={false} />
-                </mesh>
-              </Canvas>
-            </div>
-            <div className={homeStyles['project-content']}>
-              <p className={homeStyles['project-type']}>{data.type}</p>
-              <p className={homeStyles['project-description']}>
-                {data.description}
-              </p>
-              <div
-                onFocus={() => undefined}
-                onMouseOver={onMouseOverHandler}
-                onMouseLeave={onMouseLeaveHandler}
-                className={homeStyles['project-btn-wrapper']}
-              >
-                <RightArrowSVG width={90} id="arrow-btn" />
-                <Link
-                  href={data.linkUrl ?? ''}
-                  className={homeStyles['project-btn']}
+            <div className={homeStyles['project-grid']}>
+              <div className={homeStyles.webgl}>
+                <Canvas className={homeStyles.canvas} camera={camera}>
+                  {/*  <CameraControls ref={cameraControlRef} /> */}
+                  <mesh scale={[2, 2, 1]}>
+                    <planeBufferGeometry args={[3, 3 * 0.75]} />
+                    <meshBasicMaterial map={map} toneMapped={false} />
+                  </mesh>
+                </Canvas>
+              </div>
+              <div className={homeStyles['project-content']}>
+                <p className={homeStyles['project-type']}>{data.type}</p>
+                <p className={homeStyles['project-description']}>
+                  {data.description}
+                </p>
+                <div
+                  onFocus={() => undefined}
+                  onMouseOver={onMouseOverHandler}
+                  onMouseLeave={onMouseLeaveHandler}
+                  className={homeStyles['project-btn-wrapper']}
                 >
-                  View it
-                </Link>
+                  <RightArrowSVG width={90} id="arrow-btn" />
+                  <Link
+                    href={data.linkUrl ?? ''}
+                    className={homeStyles['project-btn']}
+                  >
+                    View it
+                  </Link>
+                </div>
               </div>
             </div>
           </>
