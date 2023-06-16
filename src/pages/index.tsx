@@ -47,7 +47,7 @@ export const Home = () => {
         </div>
         <p
           className={`${homeStyles['hero-watermark']} scroll`}
-          data-rate="-.2"
+          data-rate="-1"
           data-direction="vertical"
         >
           Alex
