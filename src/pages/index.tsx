@@ -12,6 +12,7 @@ import {
   SkillSection,
   ProjectSection,
   MediumAbstractSVG,
+  Button,
 } from '@/components';
 import { useScrollAnimation, useParallax } from '@/hooks';
 
@@ -59,6 +60,12 @@ export const Home = () => {
           >
             {heroSection.subheading}
           </p>
+          <Button
+            type="button"
+            className={`${homeStyles['action-btn']} scroll`}
+          >
+            See my work
+          </Button>
           <div
             className={` text-center ${homeStyles['scroll-wrapper']} ${homeStyles.scroll} scroll`}
             data-rate=".2"
