@@ -45,7 +45,13 @@ export const Home = () => {
         <div className={homeStyles['medium-blob']}>
           <MediumAbstractSVG />
         </div>
-        <p className={homeStyles['hero-watermark']}>Alex</p>
+        <p
+          className={`${homeStyles['hero-watermark']} scroll`}
+          data-rate="-.2"
+          data-direction="vertical"
+        >
+          Alex
+        </p>
         <section className={`${homeStyles.hero} wrapper`} ref={ref}>
           <h1
             className={` ${homeStyles['hero-content']} scroll`}

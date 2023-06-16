@@ -391,13 +391,13 @@
     }
     .hero-watermark {
       display: block;
+      margin: 0;
       position: absolute;
-      color: rgba(241, 241, 241, 0.3);
-      font-size: 28rem; //200px;
+      color: rgba(241, 241, 241, 0.2);
+      font-size: 30rem;
       font-weight: bold;
       font-family: 'Playfair Display SC', serif;
       letter-spacing: 0.1em;
-      transform: translateY(-60%);
       z-index: -5;
     }
   }
