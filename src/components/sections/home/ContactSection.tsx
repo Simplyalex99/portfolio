@@ -81,7 +81,7 @@ export const ContactSection = () => {
             {errors?.message && <ErrorFieldMessage fieldName="message" />}
           </fieldset>
           <div className={homeStyles['form-btn-wrapper']}>
-            <Button type="submit" className={homeStyles['form-btn']}>
+            <Button type="submit" className={homeStyles['form-btn']} width="md">
               Submit
             </Button>
             <DownLeftArrowSVG className={homeStyles['left-arrow']} />
