@@ -30,82 +30,91 @@ export const SkillSection = () => {
     setCurrentPage(page);
   };
   return (
-    <section className={`${homeStyles['skill-section']}`}>
-      <div className={` ${homeStyles['content-wrapper']} wrapper`}>
-        <div className={homeStyles['title-wrapper']}>
-          <h2>Skills</h2>
-          <span className={homeStyles['accent-svg']}>
-            <AccentSVG width="200" height="30" />
-          </span>
-        </div>
-        <p className={homeStyles['skill-description']}>
-          {skillSection.description}
-        </p>
-        <div className={homeStyles['pagination-wrapper']}>
-          {filterData.map((content) => {
-            const url = content.imageUrl;
-            return (
-              <>
-                <Image
-                  src={url}
-                  alt="code"
-                  objectFit="cover"
-                  width={50}
-                  height={50}
-                />
-                <h3 className={homeStyles['pagination-title']}>
-                  {content.title}
-                </h3>
-                <p className={homeStyles['pagination-text']}>
-                  {content.description}
-                </p>
-              </>
-            );
-          })}
-          <div className={homeStyles.pagination}>
-            <PaginationDarkTheme
-              hideFirstAndLastPageLinks
-              totalPages={maxPages}
-              currentPage={currentPage}
-              onChange={pageHandler}
-            />
-          </div>
-        </div>
-        <div className={homeStyles.content}>
-          {skillContent.map((content) => {
-            const url = content.imageUrl;
-            return (
-              <div key={content.title} className={homeStyles['content-item']}>
-                <div className={homeStyles.icon}>
-                  <Image
-                    src={url}
-                    alt="code"
-                    objectFit="cover"
-                    width={35}
-                    height={35}
-                  />
-                </div>
-                <h3 className={homeStyles.title}>{content.title}</h3>
-                <p className={homeStyles.text}>{content.description}</p>
-              </div>
-            );
-          })}
-        </div>
+    <>
+      {' '}
+      <section className={`${homeStyles['skill-section']}`}>
+        <div className={` ${homeStyles['content-wrapper']} wrapper`}>
+          <div className={homeStyles['flex-container']}>
+            <div className={homeStyles['title-wrapper']}>
+              <h2>Skills</h2>
+              <span className={homeStyles['accent-svg']}>
+                <AccentSVG width="200" height="30" />
+              </span>
+              <p className={homeStyles['skill-description']}>
+                {skillSection.description}
+              </p>
+            </div>
+            <p className={homeStyles['skill-watermark']}>Skills</p>
 
-        <div className={homeStyles['icons-wrapper']}>
-          <ReactSVG />
-          <div className={homeStyles['github-icon']}>
-            <GithubSVG />
+            <div className={homeStyles['pagination-wrapper']}>
+              {filterData.map((content) => {
+                const url = content.imageUrl;
+                return (
+                  <>
+                    <Image
+                      src={url}
+                      alt="code"
+                      objectFit="cover"
+                      width={50}
+                      height={50}
+                    />
+                    <h3 className={homeStyles['pagination-title']}>
+                      {content.title}
+                    </h3>
+                    <p className={homeStyles['pagination-text']}>
+                      {content.description}
+                    </p>
+                  </>
+                );
+              })}
+              <div className={homeStyles.pagination}>
+                <PaginationDarkTheme
+                  hideFirstAndLastPageLinks
+                  totalPages={maxPages}
+                  currentPage={currentPage}
+                  onChange={pageHandler}
+                />
+              </div>
+            </div>
+            <div className={homeStyles.content}>
+              {skillContent.map((content) => {
+                const url = content.imageUrl;
+                return (
+                  <div
+                    key={content.title}
+                    className={homeStyles['content-item']}
+                  >
+                    <div className={homeStyles.icon}>
+                      <Image
+                        src={url}
+                        alt="code"
+                        objectFit="cover"
+                        width={35}
+                        height={35}
+                      />
+                    </div>
+                    <h3 className={homeStyles.title}>{content.title}</h3>
+                    <p className={homeStyles.text}>{content.description}</p>
+                  </div>
+                );
+              })}
+            </div>
           </div>
-          <HtmlSVG />
-          <DockerSVG />
-          <CssSVG />
-          <PythonSVG />
-          <JavaScriptSVG />
-          <TypeScriptSVG />
+          <div className={homeStyles['icons-wrapper']}>
+            <ReactSVG />
+            <div className={homeStyles['github-icon']}>
+              <GithubSVG />
+            </div>
+            <HtmlSVG />
+            <DockerSVG />
+            <CssSVG />
+            <PythonSVG />
+            <JavaScriptSVG />
+            <TypeScriptSVG />
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 export default SkillSection;
