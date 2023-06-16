@@ -45,6 +45,7 @@ export const Home = () => {
         <div className={homeStyles['medium-blob']}>
           <MediumAbstractSVG />
         </div>
+        <p className={homeStyles['hero-watermark']}>Alex</p>
         <section className={`${homeStyles.hero} wrapper`} ref={ref}>
           <h1
             className={` ${homeStyles['hero-content']} scroll`}
