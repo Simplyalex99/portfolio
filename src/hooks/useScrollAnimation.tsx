@@ -27,7 +27,6 @@ export const useScrollAnimation = (svgId: string, pathId: string) => {
       if (path !== null) {
         path.style.strokeDashoffset = `${pathLength - drawLength}`;
       }
-      console.log(`length ${drawLength} ${scrollPercentage}`);
     };
     window.addEventListener('scroll', listener);
     return () => {
