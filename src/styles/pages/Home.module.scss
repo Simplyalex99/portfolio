@@ -425,7 +425,6 @@
       .flex-container {
         display: flex;
         justify-content: space-between;
-        max-width: 1400px;
         .skill-watermark {
           display: block !important;
           position: absolute;
@@ -461,13 +460,12 @@
     }
   }
   .project-section {
-    max-width: 1400px;
     .project-grid {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       align-items: center;
       gap: 30px;
-      max-width: 1400px;
+      margin: 0 auto;
       .webgl {
         height: 500px !important;
         grid-column-start: 5;
