@@ -469,6 +469,7 @@
       align-items: center;
       gap: 30px;
       margin: 0 auto;
+      max-width: 1200px;
       .webgl {
         height: 500px !important;
         grid-column-start: 5;
@@ -482,7 +483,7 @@
     .heading-wrapper {
       position: absolute;
       z-index: 100;
-      transform: translate(200px, 0%);
+      transform: translate(250px, 0%);
 
       text-align: left !important;
     }
