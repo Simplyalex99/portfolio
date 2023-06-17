@@ -35,7 +35,7 @@ export const ContactSection = () => {
         <LargeAbstractSVG />
       </div>
       <h2 className={homeStyles['contact-heading']}>Contact Me</h2>
-      <div>
+      <div className={homeStyles['contact-grid']}>
         <form
           className={homeStyles['contact-form']}
           onSubmit={handleSubmit(formHandler)}
