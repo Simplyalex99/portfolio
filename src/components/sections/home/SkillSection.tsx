@@ -44,8 +44,8 @@ export const SkillSection = () => {
                 {skillSection.description}
               </p>
             </div>
-            <p className={homeStyles['skill-watermark']}>Skills</p>
-
+            {/*  <p className={`${homeStyles['skill-watermark']}`}>Skills</p>
+             */}
             <div className={homeStyles['pagination-wrapper']}>
               {filterData.map((content) => {
                 const url = content.imageUrl;
@@ -75,6 +75,13 @@ export const SkillSection = () => {
                   onChange={pageHandler}
                 />
               </div>
+            </div>
+            <div
+              className={`scroll ${homeStyles['skill-watermark-wrap']}`}
+              data-rate=".3"
+              data-direction="vertical"
+            >
+              <p className={`${homeStyles['skill-watermark']}`}>Skills</p>
             </div>
             <div className={homeStyles.content}>
               {skillContent.map((content) => {

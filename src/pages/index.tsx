@@ -75,7 +75,7 @@ export const Home = () => {
           </Button>
           <div
             className={` text-center ${homeStyles['scroll-wrapper']} ${homeStyles.scroll} scroll`}
-            data-rate=".2"
+            data-rate=".3"
             data-direction="vertical"
           >
             <p className={`${homeStyles['hero-content']}`}>scroll</p>
