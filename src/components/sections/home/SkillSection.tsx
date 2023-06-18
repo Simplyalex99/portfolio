@@ -44,8 +44,6 @@ export const SkillSection = () => {
                 {skillSection.description}
               </p>
             </div>
-            {/*  <p className={`${homeStyles['skill-watermark']}`}>Skills</p>
-             */}
             <div className={homeStyles['pagination-wrapper']}>
               {filterData.map((content) => {
                 const url = content.imageUrl;
