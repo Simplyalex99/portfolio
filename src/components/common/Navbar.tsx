@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import Link, { LinkProps } from 'next/link';
+import Links, { LinkIds } from '@enums';
 import navbarStyles from '@/styles/components/Navbar.module.scss';
 import { HamburgerMenuSVG } from '../svg/common/HamburgerMenu';
 import { CloseSVG } from '../svg/common/Close';
-
 import { useToggleNavbarMenu } from '../../hooks/index';
-
-import Links from '../../enums/links';
 
 export type NavItemProps = {
   href: string;
@@ -28,7 +26,7 @@ export const Navbar = () => {
   const getIsActive = (type: ActiveTabType) => {
     return activeTab === type ? navbarStyles['active-tab'] : '';
   };
-  const { HOME_PATH, ABOUT_PATH, CONTACT_PATH } = Links;
+  const { HOME_PATH, ABOUT_PATH } = Links;
 
   const toggleProps = {
     menuId: 'menu-wrapper',
@@ -36,7 +34,6 @@ export const Navbar = () => {
     navbarId: 'nav',
     className: navbarStyles['open-nav'],
   };
-
   useToggleNavbarMenu(toggleProps);
   return (
     <div
@@ -113,7 +110,7 @@ export const Navbar = () => {
                 </button>
               </div>
             </Link>
-            <Link href={CONTACT_PATH}>
+            <Link href={`#${LinkIds.CONTACT_ID}`}>
               <div
                 role="presentation"
                 className={`${navbarStyles['nav-item-wrapper']}`}
