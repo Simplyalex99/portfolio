@@ -1,7 +1,10 @@
+import React, { useRef } from 'react';
 import homeStyles from '@/styles/pages/Home.module.scss';
 import Link from 'next/link';
 import { useForm } from 'react-hook-form';
-import Links from '@/src/enums/links';
+import tokens from '@/config';
+import Links, { LinkIds } from '@/src/enums/links';
+import emailjs from '@emailjs/browser';
 import { Button } from '../../common/Button';
 import { DownLeftArrowSVG } from '../../svg/arrows/DownLeftArrow';
 import { MediumSVG } from '../../svg/social/Medium';
@@ -19,16 +22,43 @@ const ErrorFieldMessage = ({ fieldName }: ErrorFieldProps) => {
     <p className={homeStyles['form-error-text']}>Please specify {fieldName}</p>
   );
 };
-
+type FormProps = {
+  email: string;
+  message: string;
+  name: string;
+};
 export const ContactSection = () => {
-  const { register, handleSubmit, formState } = useForm();
-  const { errors } = formState;
+  const defaultValues = { name: '', email: '', message: '' };
 
-  const formHandler = () => {};
+  // eslint-disable-next-line object-curly-newline
+  const { register, handleSubmit, formState, reset } = useForm({
+    defaultValues,
+    // eslint-disable-next-line object-curly-newline
+  });
+
+  const { errors } = formState;
+  const { API_KEY, SERVICE_ID, TEMPLATE_ID } = tokens;
+  const ref = useRef<HTMLFormElement>(null);
+  const formHandler = (data: any) => {
+    const formData = data as FormProps;
+    console.log(`${SERVICE_ID} ${TEMPLATE_ID}`);
+    emailjs.send(SERVICE_ID, TEMPLATE_ID, formData, API_KEY).then(
+      (result) => {
+        console.log(result.text);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
+    reset();
+  };
 
   const { MEDIUM_LINK, GITHUB_LINK, LINKEDIN_LINK } = Links;
   return (
-    <section className={`${homeStyles['contact-section']} wrapper`}>
+    <section
+      className={`${homeStyles['contact-section']} wrapper`}
+      id={LinkIds.CONTACT_ID}
+    >
       <div className={homeStyles['blob-sm-wrapper']}>
         <SmallAbstractSVG />
       </div>
@@ -43,6 +73,7 @@ export const ContactSection = () => {
         <div className={homeStyles['form-wrapper']}>
           <h2 className={homeStyles['contact-heading']}>Contact Me</h2>
           <form
+            ref={ref}
             className={homeStyles['contact-form']}
             onSubmit={handleSubmit(formHandler)}
           >
