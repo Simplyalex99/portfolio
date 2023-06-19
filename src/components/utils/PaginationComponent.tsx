@@ -95,7 +95,7 @@ const PageLight = (props: any) => {
         paginationStyles['dark-blue']
       } ${
         isActive
-          ? `${paginationStyles['active-dark-mode']} ${paginationStyles.active}`
+          ? `${paginationStyles['active-light-mode']} ${paginationStyles.active}`
           : ''
       } `}
     >
