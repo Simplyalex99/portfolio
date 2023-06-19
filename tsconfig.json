@@ -22,7 +22,9 @@
       "@/templates/*": ["./src/templates/*"],
       "@/components": ["./src/components/index"],
       "@/hooks": ["./src/hooks/index"],
-      "@/utils": ["./src/utils/getPaginationHelper"]
+      "@/utils": ["./src/utils/getPaginationHelper"],
+      "@/config": ["./src/config/secrets"],
+      "@enums": ["./src/enums/links"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "global.d.ts"],
