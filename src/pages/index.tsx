@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import Image from 'next/image';
 import yaml from '@/templates/home.yaml';
+import { LinkIds } from '@enums';
 import homeStyles from '@/styles/pages/Home.module.scss';
 import {
   withLayout,
@@ -11,19 +12,24 @@ import {
   LineArtSVG,
   SkillSection,
   ProjectSection,
+  MediumAbstractSVG,
+  Button,
 } from '@/components';
 import { useScrollAnimation, useParallax } from '@/hooks';
+import Link from 'next/link';
 
 export const Home = () => {
   const { heroSection } = yaml;
+  const svgId = 'scroll-svg';
+  const lineArtPathId = 'scroll-line';
   const ref = useRef<HTMLDivElement>(null);
   useParallax();
-  useScrollAnimation();
+  useScrollAnimation(svgId, lineArtPathId);
   return (
     <>
       <SEO title="My Portfolio" />
       <div className={homeStyles['line-container']}>
-        <LineArtSVG preserveAspectRatio="xMidyMid meet" />
+        <LineArtSVG preserveAspectRatio="xMidYMid meet" id={svgId} />
       </div>
       <div className={`${homeStyles['hero-img-wrapper']}`}>
         <div className={homeStyles['hero-img-accent']}>
@@ -38,6 +44,16 @@ export const Home = () => {
         />
       </div>
       <div className={`${homeStyles.wrapper}`}>
+        <div className={homeStyles['medium-blob']}>
+          <MediumAbstractSVG />
+        </div>
+        <p
+          className={`${homeStyles['hero-watermark']} scroll`}
+          data-rate="-1"
+          data-direction="vertical"
+        >
+          Alex
+        </p>
         <section className={`${homeStyles.hero} wrapper`} ref={ref}>
           <h1
             className={` ${homeStyles['hero-content']} scroll`}
@@ -53,9 +69,17 @@ export const Home = () => {
           >
             {heroSection.subheading}
           </p>
+          <Link href={`#${LinkIds.PROJECT_ID}`}>
+            <Button
+              type="button"
+              className={`${homeStyles['action-btn']} scroll`}
+            >
+              See my work
+            </Button>
+          </Link>
           <div
             className={` text-center ${homeStyles['scroll-wrapper']} ${homeStyles.scroll} scroll`}
-            data-rate=".2"
+            data-rate=".3"
             data-direction="vertical"
           >
             <p className={`${homeStyles['hero-content']}`}>scroll</p>

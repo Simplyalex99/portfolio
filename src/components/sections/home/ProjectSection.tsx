@@ -1,7 +1,9 @@
+/* eslint-disable no-unused-vars */
 import { useState, useRef } from 'react';
 import Link from 'next/link';
-import { Canvas } from '@react-three/fiber';
+import Image from 'next/image';
 import { CameraControls } from '@react-three/drei';
+import { LinkIds } from '@enums';
 import * as THREE from 'three';
 import homeStyles from '@/styles/pages/Home.module.scss';
 import yaml from '@/templates/home.yaml';
@@ -35,7 +37,7 @@ export const ProjectSection = () => {
   const pageHandler = (page: number) => {
     setCurrentPage(page);
   };
-
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const onPointerEnterHandler = () => {
     if (cameraControlRef.current) {
       cameraControlRef.current.enabled = true;
@@ -47,6 +49,7 @@ export const ProjectSection = () => {
       }
     }, 300);
   };
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const onPointerLeaveHandler = () => {
     if (cameraControlRef.current) {
       cameraControlRef.current.enabled = true;
@@ -74,7 +77,10 @@ export const ProjectSection = () => {
     }
   };
   return (
-    <section className={`${homeStyles['project-section']} wrapper`}>
+    <section
+      className={`${homeStyles['project-section']} wrapper`}
+      id={LinkIds.PROJECT_ID}
+    >
       {filterData.map((data) => {
         if (process.browser) {
           map = textureLoader.load(data.imageUrl);
@@ -88,37 +94,35 @@ export const ProjectSection = () => {
               <h3>/Projects</h3>
               <h2>{data.title}</h2>
             </div>
-            <div className={homeStyles.webgl}>
-              <Canvas
-                className={homeStyles.canvas}
-                camera={camera}
-                onPointerLeave={onPointerLeaveHandler}
-              >
-                <CameraControls ref={cameraControlRef} />
-                <mesh onPointerEnter={onPointerEnterHandler} scale={[2, 2, 1]}>
-                  <planeBufferGeometry args={[3, 3 * 0.75]} />
-                  <meshBasicMaterial map={map} toneMapped={false} />
-                </mesh>
-              </Canvas>
-            </div>
-            <div className={homeStyles['project-content']}>
-              <p className={homeStyles['project-type']}>{data.type}</p>
-              <p className={homeStyles['project-description']}>
-                {data.description}
-              </p>
-              <div
-                onFocus={() => undefined}
-                onMouseOver={onMouseOverHandler}
-                onMouseLeave={onMouseLeaveHandler}
-                className={homeStyles['project-btn-wrapper']}
-              >
-                <RightArrowSVG width={90} id="arrow-btn" />
-                <Link
-                  href={data.linkUrl ?? ''}
-                  className={homeStyles['project-btn']}
+            <div className={homeStyles['project-grid']}>
+              <div className={homeStyles.webgl}>
+                <Image
+                  alt="project"
+                  src={`/${data.imageUrl}`}
+                  width={400}
+                  height={400}
+                  className={homeStyles.img}
+                />
+              </div>
+              <div className={homeStyles['project-content']}>
+                <p className={homeStyles['project-type']}>{data.type}</p>
+                <p className={homeStyles['project-description']}>
+                  {data.description}
+                </p>
+                <div
+                  onFocus={() => undefined}
+                  onMouseOver={onMouseOverHandler}
+                  onMouseLeave={onMouseLeaveHandler}
+                  className={homeStyles['project-btn-wrapper']}
                 >
-                  View it
-                </Link>
+                  <RightArrowSVG width={90} id="arrow-btn" />
+                  <Link
+                    href={data.linkUrl ?? ''}
+                    className={homeStyles['project-btn']}
+                  >
+                    View it
+                  </Link>
+                </div>
               </div>
             </div>
           </>

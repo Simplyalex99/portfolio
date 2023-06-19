@@ -1,13 +1,16 @@
 import { useEffect } from 'react';
 
-export const useScrollAnimation = () => {
+export const useScrollAnimation = (svgId: string, pathId: string) => {
   useEffect(() => {
     const listener = () => {
-      const paths = document.querySelectorAll('path');
-      if (paths.length < 2) {
-        return;
+      const svg = document.getElementById(svgId);
+      if (svg?.style) {
+        if (svg.style.display !== 'inline-block') {
+          svg.style.display = 'inline-block';
+        }
       }
-      const path = paths[2];
+      const element = document.getElementById(pathId);
+      const path = element as unknown as SVGPathElement;
       const pathLength = path?.getTotalLength() ?? 0;
       if (path !== null) {
         path.style.strokeDasharray = pathLength + ' ' + pathLength;
@@ -16,7 +19,6 @@ export const useScrollAnimation = () => {
       const scrollTopDoc = document.documentElement.scrollTop;
       const scrollTopBody = document.body.scrollTop;
       const scrollHeight = document.documentElement.scrollHeight;
-
       const clientHeight = document.documentElement.clientHeight;
       const totalScroll = scrollTopBody + scrollTopDoc;
       const totalHeight = scrollHeight + clientHeight;
@@ -26,7 +28,6 @@ export const useScrollAnimation = () => {
         path.style.strokeDashoffset = `${pathLength - drawLength}`;
       }
     };
-
     window.addEventListener('scroll', listener);
     return () => {
       window.removeEventListener('scroll', listener);

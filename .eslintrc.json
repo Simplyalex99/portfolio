@@ -16,7 +16,9 @@
           ["@components", "./components/index"],
           ["@styles", "./styles"],
           ["@hook", "./hooks/index"],
-          ["@utils", "./utils/getPaginationHelper"]
+          ["@utils", "./utils/getPaginationHelper"],
+          ["@config", "./config/secrets"],
+          ["@enums", "./enums/links"]
         ]
       },
       "typescript": {
