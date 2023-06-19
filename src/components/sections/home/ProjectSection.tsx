@@ -1,8 +1,9 @@
 /* eslint-disable no-unused-vars */
 import { useState, useRef } from 'react';
 import Link from 'next/link';
-import { Canvas } from '@react-three/fiber';
+import Image from 'next/image';
 import { CameraControls } from '@react-three/drei';
+import { LinkIds } from '@enums';
 import * as THREE from 'three';
 import homeStyles from '@/styles/pages/Home.module.scss';
 import yaml from '@/templates/home.yaml';
@@ -76,7 +77,10 @@ export const ProjectSection = () => {
     }
   };
   return (
-    <section className={`${homeStyles['project-section']} wrapper`}>
+    <section
+      className={`${homeStyles['project-section']} wrapper`}
+      id={LinkIds.PROJECT_ID}
+    >
       {filterData.map((data) => {
         if (process.browser) {
           map = textureLoader.load(data.imageUrl);
@@ -92,13 +96,13 @@ export const ProjectSection = () => {
             </div>
             <div className={homeStyles['project-grid']}>
               <div className={homeStyles.webgl}>
-                <Canvas className={homeStyles.canvas} camera={camera}>
-                  {/*  <CameraControls ref={cameraControlRef} /> */}
-                  <mesh scale={[2, 2, 1]}>
-                    <planeBufferGeometry args={[3, 3 * 0.75]} />
-                    <meshBasicMaterial map={map} toneMapped={false} />
-                  </mesh>
-                </Canvas>
+                <Image
+                  alt="project"
+                  src={`/${data.imageUrl}`}
+                  width={400}
+                  height={400}
+                  className={homeStyles.img}
+                />
               </div>
               <div className={homeStyles['project-content']}>
                 <p className={homeStyles['project-type']}>{data.type}</p>
