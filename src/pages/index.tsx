@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import Image from 'next/image';
 import yaml from '@/templates/home.yaml';
+import { LinkIds } from '@enums';
 import homeStyles from '@/styles/pages/Home.module.scss';
 import {
   withLayout,
@@ -15,6 +16,7 @@ import {
   Button,
 } from '@/components';
 import { useScrollAnimation, useParallax } from '@/hooks';
+import Link from 'next/link';
 
 export const Home = () => {
   const { heroSection } = yaml;
@@ -67,12 +69,14 @@ export const Home = () => {
           >
             {heroSection.subheading}
           </p>
-          <Button
-            type="button"
-            className={`${homeStyles['action-btn']} scroll`}
-          >
-            See my work
-          </Button>
+          <Link href={`#${LinkIds.PROJECT_ID}`}>
+            <Button
+              type="button"
+              className={`${homeStyles['action-btn']} scroll`}
+            >
+              See my work
+            </Button>
+          </Link>
           <div
             className={` text-center ${homeStyles['scroll-wrapper']} ${homeStyles.scroll} scroll`}
             data-rate=".3"
