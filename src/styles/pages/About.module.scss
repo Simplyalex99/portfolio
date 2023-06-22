@@ -1,0 +1,96 @@
+.hero {
+  text-align: center;
+  max-width: 500px;
+  margin: 10em auto 0 auto;
+  .navigation {
+  }
+  .hero-content {
+    .heading-wrapper {
+      .hero-subheading {
+        font-size: 1.3rem;
+        font-weight: 200;
+        font-family: 'Playfair Display SC', serif;
+        letter-spacing: 0.5em;
+        margin: 0;
+      }
+      .hero-heading {
+        font-family: 'Playfair Display SC', serif;
+        font-size: 5rem;
+        margin: 0;
+        font-weight: 400;
+        text-transform: lowercase;
+        text-align: center;
+        span {
+          font-family: 'Playfair Display', serif;
+          margin-right: 20px;
+          font-size: 4rem;
+          font-weight: 400;
+          font-style: italic !important;
+          text-transform: none;
+        }
+      }
+    }
+    .hero-description {
+      margin: 0;
+      margin: 3em 0;
+      text-align: left;
+    }
+    .action-btn-wrapper {
+      margin-bottom: 3em;
+      cursor: pointer;
+      position: relative;
+      text-align: left;
+      z-index: 2;
+      .action-btn {
+        color: #b2b0b0;
+        margin-left: 12px;
+      }
+    }
+  }
+  .carousel-wrapper {
+    margin: 0 auto;
+    max-height: 650px !important;
+    margin-bottom: 3.8em;
+    .img-slide {
+      object-fit: cover;
+      width: 100%;
+      height: 650px;
+      transition: 0.3s;
+      display: block;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .hero {
+    max-width: none;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    .hero-content {
+      grid-column-start: 1;
+      grid-column-end: 4;
+      align-self: center;
+      text-align: left;
+      .heading-wrapper {
+        .hero-heading {
+          text-align: left;
+        }
+      }
+    }
+    .carousel-wrapper {
+      grid-column-start: 5;
+      grid-column-end: 9;
+      margin: 0;
+      margin-bottom: 0;
+      .img-slide {
+        //max-height: 600px;
+        max-width: 500px;
+      }
+    }
+    .navigation {
+      grid-column-start: 10;
+      grid-column-end: -1;
+      align-self: center;
+    }
+  }
+}
