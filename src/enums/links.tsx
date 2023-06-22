@@ -9,6 +9,10 @@ enum Links {
 export enum LinkIds {
   CONTACT_ID = 'contact-section',
   PROJECT_ID = 'project-section',
+  WORK_ID = 'work-section',
+  STORY_ID = 'story-section',
+  MOTTO_ID = 'motto-section',
+  SKILLS_ID = 'skill-section',
 }
 
 export default Links;
