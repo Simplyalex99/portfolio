@@ -14,6 +14,37 @@ declare module '*.yaml' {
         type: string;
       }>;
     };
+    mainSection: {
+      subheading: string;
+      heading: string;
+      headingAccent: string;
+      description: string;
+      images: Array<string>;
+    };
+    workSection: {
+      content: Array<{
+        title: string;
+        accent: string;
+        text: string;
+        description: string;
+        imageUrl: string;
+        linkUrl: string;
+      }>;
+    };
+    mottoSection: {
+      content: Array<{
+        title: string;
+        subheading: string;
+        heading: string;
+      }>;
+    };
+    storySection: {
+      content: Array<{
+        title: string;
+        description: string;
+        imageUrl: string;
+      }>;
+    };
   };
   export default yaml;
 }
