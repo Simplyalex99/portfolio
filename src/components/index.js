@@ -37,3 +37,4 @@ export { withLayout } from './layouts/withLayout';
 export { ContactSection } from './sections/home/ContactSection';
 export { SkillSection } from './sections/home/SkillSection';
 export { ProjectSection } from './sections/home/ProjectSection';
+export { Navigation } from './others/Navigation';
