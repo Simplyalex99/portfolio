@@ -38,5 +38,5 @@ export { ContactSection } from './sections/home/ContactSection';
 export { SkillSection } from './sections/home/SkillSection';
 export { ProjectSection } from './sections/home/ProjectSection';
 export { WorkSection } from './sections/about/WorkSection';
+export { MottoSection } from './sections/about/MottoSection';
 export { Navigation } from './others/Navigation';
-export { WatermarkSection } from './others/WatermarkSection';
