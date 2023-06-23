@@ -37,4 +37,6 @@ export { withLayout } from './layouts/withLayout';
 export { ContactSection } from './sections/home/ContactSection';
 export { SkillSection } from './sections/home/SkillSection';
 export { ProjectSection } from './sections/home/ProjectSection';
+export { WorkSection } from './sections/about/WorkSection';
 export { Navigation } from './others/Navigation';
+export { WatermarkSection } from './others/WatermarkSection';
