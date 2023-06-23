@@ -1,7 +1,7 @@
 mainSection:
   subheading: I am Alex
-  headingAccent: About
-  heading: me
+  headingAccent: Beautiful
+  heading: UI/UX
   description: >
     I’ve worked on different open-source projects and have earned contributor roles, I am ready to bring my skills and provide the best quality code and take ownership for what I build. I also enjoy many other hobbies from rock climbing,
     canoeing and work on managing my time.
@@ -18,7 +18,7 @@ workSection:
       imageUrl: /about/softwareforlove.png
       linkUrl: https://github.com/Software-For-Love/software-for-love-site
     - title: Oasis
-      accent: share your experience
+      accent: share experiences
       text: with others
       description: >
         An open-source project of an online social media platform for developers to share their experience and find work easily. As a developer, I worked on both
