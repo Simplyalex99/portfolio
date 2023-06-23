@@ -1,0 +1,120 @@
+.motto-section {
+  margin-top: 12em;
+  margin-bottom: 10em;
+  .section-heading {
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin: 0;
+    margin-bottom: 10em;
+    text-align: center;
+  }
+
+  .watermark-wrap {
+    display: block !important;
+    left: 0;
+    .watermark {
+      display: block !important;
+      position: absolute;
+      font-size: 10rem;
+      transform: translateY(-1200px);
+      font-family: 'Playfair Display SC';
+      font-weight: bold;
+      letter-spacing: 0.1em;
+      margin: 0;
+      color: rgba(2, 2, 2, 0.04);
+      text-align: center;
+    }
+  }
+  .grid-container {
+    .widget {
+      padding-top: 12em;
+      padding-bottom: 12em;
+      .wrapper {
+        text-align: center;
+        .title {
+          font-weight: 400;
+          font-family: 'Playfair Display SC';
+          font-size: 4rem;
+          margin-top: 0;
+        }
+        .subheading {
+          margin: 0;
+        }
+        .description {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .motto-section {
+    .grid-container {
+      .widget {
+        display: grid;
+        justify-content: center;
+        .wrapper {
+          max-width: 600px;
+          // margin: 0 auto;
+        }
+      }
+    }
+    .section-heading {
+      margin-bottom: 15em;
+      margin-top: 10em;
+    }
+    .watermark-wrap {
+      .watermark {
+        font-size: 15rem;
+        transform: translateY(-1450px);
+      }
+    }
+  }
+}
+@media (min-width: 1100px) {
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      'a a a b b b'
+      'a a a c c c';
+    .widget {
+      .wrapper {
+        justify-self: center;
+        max-width: none;
+        margin-left: 3em;
+        margin-right: 3em;
+      }
+    }
+    div:first-child {
+      grid-area: a;
+      justify-content: start !important;
+    }
+    .widget:first-child {
+      .wrapper {
+        text-align: left;
+        .title {
+          font-size: 6rem;
+        }
+      }
+    }
+    div:nth-child(2) {
+      grid-area: b;
+    }
+    div:nth-child(3) {
+      grid-area: c;
+    }
+  }
+  .motto-section {
+    .watermark-wrap {
+      .watermark {
+        font-size: 20rem;
+        transform: translateY(-1450px);
+      }
+    }
+    .section-heading {
+      margin-bottom: 15em;
+      margin-top: 15em;
+    }
+  }
+}
