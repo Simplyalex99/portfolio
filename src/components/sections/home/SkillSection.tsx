@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Image from 'next/image';
-import homeStyles from '@/styles/pages/Home.module.scss';
+import homeStyles from '@/styles/components/Skill.module.scss';
 import yaml from '@/templates/home.yaml';
 import { getPaginationHelper } from '@/utils';
 import { createPaginationTheme } from '../../utils/PaginationComponent';
@@ -33,7 +33,7 @@ export const SkillSection = () => {
     <>
       {' '}
       <section className={`${homeStyles['skill-section']}`}>
-        <div className={` ${homeStyles['content-wrapper']} wrapper`}>
+        <div className={` ${homeStyles['content-wrapper']} wrapper mg-top-0`}>
           <div className={homeStyles['flex-container']}>
             <div className={homeStyles['title-wrapper']}>
               <h2>Skills</h2>
@@ -55,6 +55,7 @@ export const SkillSection = () => {
                       objectFit="cover"
                       width={50}
                       height={50}
+                      unoptimized
                     />
                     <h3 className={homeStyles['pagination-title']}>
                       {content.title}

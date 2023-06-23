@@ -4,7 +4,6 @@ import Image from 'next/image';
 import homeStyles from '@/styles/pages/About.module.scss';
 import { getPaginationHelper } from '@/utils';
 import yaml from '@/templates/about.yaml';
-import WatermarkSection from '../../others/WatermarkSection';
 import { Button } from '../../common/Button';
 import { Pagination } from '../../utils/PaginationComponent';
 
@@ -26,7 +25,14 @@ export const WorkSection = () => {
   };
   return (
     <section className={homeStyles['work-section']}>
-      <WatermarkSection heading="My contributions" watermark="Work" />
+      <div
+        className={`scroll ${homeStyles['watermark-wrap']}`}
+        data-rate=".3"
+        data-direction="vertical"
+      >
+        <p className={`${homeStyles.watermark}`}>Work</p>
+      </div>
+      <p className={homeStyles['section-heading']}>My contributions</p>
       <div className={homeStyles['work-content-wrapper']}>
         {filterData.map((data) => {
           const { imageUrl, linkUrl, description, text, title, accent } = data;
@@ -50,11 +56,13 @@ export const WorkSection = () => {
                 <p className={homeStyles['work-title']}>{title}</p>
                 <p className={homeStyles['work-description']}>{description}</p>
               </div>
-              <Link href={linkUrl} className={homeStyles['work-link']}>
-                <Button type="button" width="md">
-                  See it
-                </Button>
-              </Link>
+              <div className={homeStyles['work-link-wrapper']}>
+                <Link href={linkUrl} className={homeStyles['work-link']}>
+                  <Button type="button" width="md">
+                    See it
+                  </Button>
+                </Link>
+              </div>
             </div>
           );
         })}

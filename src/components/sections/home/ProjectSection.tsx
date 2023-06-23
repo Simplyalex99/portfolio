@@ -5,11 +5,11 @@ import Image from 'next/image';
 import { CameraControls } from '@react-three/drei';
 import { LinkIds } from '@enums';
 import * as THREE from 'three';
-import homeStyles from '@/styles/pages/Home.module.scss';
+import homeStyles from '@/styles/components/Project.module.scss';
 import yaml from '@/templates/home.yaml';
 import { getPaginationHelper } from '@/utils';
 import { createPaginationTheme } from '../../utils/PaginationComponent';
-import { RightArrowSVG } from '../../svg/arrows/RightArrow';
+import { Button } from '../../common/Button';
 
 const PaginationLightTheme = createPaginationTheme('LIGHT');
 type PaginationData = {
@@ -115,12 +115,13 @@ export const ProjectSection = () => {
                   onMouseLeave={onMouseLeaveHandler}
                   className={homeStyles['project-btn-wrapper']}
                 >
-                  <RightArrowSVG width={90} id="arrow-btn" />
                   <Link
                     href={data.linkUrl ?? ''}
                     className={homeStyles['project-btn']}
                   >
-                    View it
+                    <Button type="button" width="md">
+                      View it
+                    </Button>
                   </Link>
                 </div>
               </div>
