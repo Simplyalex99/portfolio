@@ -15,15 +15,13 @@
       }
       .hero-heading {
         font-family: 'Playfair Display SC', serif;
-        font-size: 5rem;
+        font-size: 4rem;
         margin: 0;
         font-weight: 400;
         text-transform: lowercase;
         text-align: center;
         span {
           font-family: 'Playfair Display', serif;
-          margin-right: 20px;
-          font-size: 4rem;
           font-weight: 400;
           font-style: italic !important;
           text-transform: none;
@@ -32,7 +30,7 @@
     }
     .hero-description {
       margin: 0;
-      margin: 3em 0;
+      margin: 2em 0;
       text-align: left;
     }
     .action-btn-wrapper {
@@ -42,7 +40,8 @@
       text-align: left;
       z-index: 2;
       .action-btn {
-        color: #b2b0b0;
+        color: #b3b0b0;
+        font-weight: bold;
         margin-left: 12px;
       }
     }
@@ -61,7 +60,58 @@
   }
 }
 
-@media (min-width: 1000px) {
+.work-section {
+  margin-top: 12em;
+
+  .work-pagination {
+    margin-top: 3em;
+  }
+  .work-content-wrapper {
+    margin-top: 10em;
+    .work-content {
+      margin: 0 auto;
+      .work-img-wrapper {
+        margin-bottom: 10em;
+        height: 300px;
+
+        .work-heading {
+          margin: 0;
+          position: absolute;
+          font-size: 3rem;
+          color: white;
+          transform: translateY(190px);
+          width: 200px;
+          .work-accent {
+            color: black;
+            display: block;
+          }
+        }
+        .work-img {
+          width: 100% !important;
+          height: 100% !important;
+          object-fit: cover;
+        }
+      }
+      .work-link {
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .work-text-content {
+        .work-title,
+        .work-description {
+          margin: 0;
+          margin-bottom: 1.5em;
+        }
+        .work-title {
+          font-weight: bold;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1100px) {
   .hero {
     max-width: none;
     display: grid;
@@ -74,6 +124,10 @@
       .heading-wrapper {
         .hero-heading {
           text-align: left;
+          span {
+            //display: block;
+            margin: 0;
+          }
         }
       }
     }
@@ -83,7 +137,6 @@
       margin: 0;
       margin-bottom: 0;
       .img-slide {
-        //max-height: 600px;
         max-width: 500px;
       }
     }
