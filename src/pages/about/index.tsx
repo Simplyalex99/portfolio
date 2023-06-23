@@ -1,7 +1,14 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { withLayout, RightArrowSVG, Navigation } from '@/components';
+import {
+  withLayout,
+  RightArrowSVG,
+  Navigation,
+  WorkSection,
+  SEO,
+} from '@/components';
 import yaml from '@/templates/about.yaml';
+import { useParallax } from '@/src/hooks';
 import homeStyles from '@/styles/pages/About.module.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper';
@@ -27,14 +34,17 @@ export const About = () => {
     }
   };
   console.log(images);
+  useParallax();
   return (
     <div className="wrapper">
+      <SEO title="about Alex" />
       <section className={homeStyles.hero}>
         <div className={homeStyles['hero-content']}>
           <div className={homeStyles['heading-wrapper']}>
             <p className={homeStyles['hero-subheading']}>{data.subheading}</p>
             <h2 className={homeStyles['hero-heading']}>
               <span>{data.headingAccent}</span>
+              <br />
               {data.heading}
             </h2>
           </div>
@@ -50,7 +60,7 @@ export const About = () => {
               href={LinkIds.CONTACT_ID}
               className={homeStyles['action-btn']}
             >
-              Get in touch
+              See my work
             </Link>
           </div>
         </div>
@@ -83,6 +93,7 @@ export const About = () => {
           <Navigation />
         </div>
       </section>
+      <WorkSection />
     </div>
   );
 };
