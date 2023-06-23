@@ -1,3 +1,10 @@
+type MottoContent = {
+  title: string;
+  subheading: string;
+  description: string;
+  color: string;
+  background: string;
+};
 declare module '*.yaml' {
   const yaml: {
     heroSection: { heading: string; subheading: string };
@@ -32,11 +39,7 @@ declare module '*.yaml' {
       }>;
     };
     mottoSection: {
-      content: Array<{
-        title: string;
-        subheading: string;
-        heading: string;
-      }>;
+      content: Array<MottoContent>;
     };
     storySection: {
       content: Array<{

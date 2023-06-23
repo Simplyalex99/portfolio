@@ -26,31 +26,23 @@ workSection:
         refactor code, implement the backend authentication and fixed UI issues for different browser compatibility.
       imageUrl: /about/oasis.png
       linkUrl: https://github.com/Simplyalex99/oasis
-projectSection:
-  content:
+    - title: Review AI
+      description: >
+        A sentimental analysis app for businesses to identify new sales opportunities and monitor brand by having user reviews 
+        classified into positive and negative reviews.
+      imageUrl: /about/reviewai.png
+      linkUrl: https://github.com/TSharvananthan/Sentimentality
+      text: of customers
+      accent: discover feelings
     - title: OpenReview
       description: >
         A dashboard app designed to help businesses save time and make decisions with the help of machine learning 
         and natural language processing. The app identifies local competitors, predicts the sucess of the businesses
         and provides sentimental analysis of customer reviews and more.
-      imageUrl: openreview_project.png
+      imageUrl: /about/openreview.png
       linkUrl: https://github.com/Simplyalex99/OpenReview
-      type: Website
-    - title: GPA Calculator
-      description: >
-        An app that automatiaclly calculates students' GPA at York University. This app
-        saves students lots of time as currently there is no way to caclulate one's culmative,sessional, and specific
-        department GPA without manually inputting all the required fields which is tedious when there are so many courses.
-      imageUrl: eecs_project.png
-      linkUrl: https://github.com/Simplyalex99/EECSCalculator
-      type: Chrome extension
-    - title: Review AI
-      description: >
-        A sentimental analysis app for businesses to identify new sales opportunities and monitor brand by having user revuews 
-        classified into positive and negative reviews.
-      imageUrl: review-project.png
-      linkUrl: https://github.com/TSharvananthan/Sentimentality
-      type: Website
+      accent: experience satisfication
+      text: through A.I
 skillSection:
   description:
     I love to learn new technologies and make an impact with what I learn and build. I am constantly learning new
@@ -76,12 +68,16 @@ mottoSection:
         I focus on getting every aspect of design correct when implementing mockups into code and not just
         code for the sake of coding or a chore but really take passion into what I am doing and have every 
         part of a design perfect to the smallest pixel.
+      background: 'black'
+      color: white
     - title: Beautiful
       subheading: -02-
       description: >
         For me beautiful user interface and experience is not just display fancy designs but to build trust for the user and
         the website, while providing them a soothing experience that will leave them an impression that they found
         the service they have been looking for and can trust.
+      background: '#1D222F'
+      color: white
     - title: Scalable
       subheading: -03-
       description: >
@@ -89,6 +85,8 @@ mottoSection:
         what if we add this new feature or how will this app look in the next few months and 3 years? By implementing
         software best practices and design patterns, this allows any app for businesses to grow and save time and money
         without worrying what will happen to their app or why things go wrong.
+      background: 'white'
+      color: black
 storySection:
   content:
     - title: Education
