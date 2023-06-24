@@ -31,11 +31,18 @@ a {
   margin: 8em 2em 0em 2em;
 }
 .mg-top-0 {
-  margin-top: 0em;
+  margin-top: 0 !important;
 }
 
 @media (min-width: 900px) {
   .wrapper {
     margin: 2em 3em 0em 3em;
+  }
+}
+
+@media (min-width: 2000px) {
+  .container {
+    max-width: 1600px;
+    margin: 0 auto;
   }
 }
