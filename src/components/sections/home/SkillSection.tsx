@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import homeStyles from '@/styles/components/Skill.module.scss';
-import yaml from '@/templates/home.yaml';
+import yaml from '@/templates/about.yaml';
 import { getPaginationHelper } from '@/utils';
+import { LinkIds } from '@/src/enums/links';
 import { createPaginationTheme } from '../../utils/PaginationComponent';
 import { CssSVG } from '../../svg/icons/Css';
 import { HtmlSVG } from '../../svg/icons/Html';
@@ -32,7 +33,10 @@ export const SkillSection = () => {
   return (
     <>
       {' '}
-      <section className={`${homeStyles['skill-section']}`}>
+      <section
+        className={`${homeStyles['skill-section']}`}
+        id={LinkIds.SKILLS_ID}
+      >
         <div className={` ${homeStyles['content-wrapper']} wrapper mg-top-0`}>
           <div className={homeStyles['flex-container']}>
             <div className={homeStyles['title-wrapper']}>
@@ -75,11 +79,7 @@ export const SkillSection = () => {
                 />
               </div>
             </div>
-            <div
-              className={`scroll ${homeStyles['skill-watermark-wrap']}`}
-              data-rate=".3"
-              data-direction="vertical"
-            >
+            <div className={homeStyles['skill-watermark-wrap']}>
               <p className={`${homeStyles['skill-watermark']}`}>Skills</p>
             </div>
             <div className={homeStyles.content}>
