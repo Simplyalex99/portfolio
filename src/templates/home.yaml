@@ -53,7 +53,7 @@ skillSection:
       imageUrl: /icons/machine-learning.png
     - title: UI/UX
       description: I am familiar with design principles such as whitespace color and contrast and typography.
-      imageUrl: /icons/dobe-design.png
+      imageUrl: /icons/adobe-design.png
     - title: Frontend
       description: I can implement mock-up designs to code, and have knowledge of front-end/back-end technologies and responsive design.
       imageUrl: /icons/php-code-bold.png
