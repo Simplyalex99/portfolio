@@ -9,9 +9,10 @@ import {
   SkillSection,
   MottoSection,
   StorySection,
+  LineArtSVG,
 } from '@/components';
 import yaml from '@/templates/home.yaml';
-import { useParallax } from '@/src/hooks';
+import { useParallax, useScrollAnimation } from '@/src/hooks';
 import homeStyles from '@/styles/pages/Home.module.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper';
@@ -23,6 +24,8 @@ export const About = () => {
   const data = yaml.mainSection;
   const images = data.images;
   const imageId = 'carousel';
+  const svgId = 'scroll-svg';
+  const lineArtPathId = 'scroll-line';
   const onMouseOverHandler = () => {
     const element = document.getElementById('arrow-btn');
     if (element) {
@@ -37,8 +40,12 @@ export const About = () => {
     }
   };
   useParallax();
+  useScrollAnimation(svgId, lineArtPathId);
   return (
     <>
+      <div className={homeStyles['line-container']}>
+        <LineArtSVG preserveAspectRatio="xMidYMid meet" id={svgId} />
+      </div>
       <div className="wrapper">
         <SEO title="about Alex" />
         <section className={homeStyles.hero}>
