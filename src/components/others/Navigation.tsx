@@ -14,7 +14,7 @@ export const Navigation = () => {
       {Links.map((items) => {
         const { text, url } = items;
         return (
-          <Link key={url} href={url} className={navStyles['nav-link']}>
+          <Link key={url} href={`#${url}`} className={navStyles['nav-link']}>
             {text}
           </Link>
         );
