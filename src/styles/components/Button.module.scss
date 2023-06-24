@@ -8,6 +8,8 @@
   background: black;
   cursor: pointer;
   transition: 0.5s ease;
+  position: relative;
+  z-index: 2;
   &:hover {
     background-color: white;
     color: black;

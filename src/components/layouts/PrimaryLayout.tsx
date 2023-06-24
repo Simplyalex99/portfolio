@@ -8,14 +8,14 @@ interface PrimaryLayoutProps {
 }
 export const PrimaryLayout: React.FC<PrimaryLayoutProps> = ({ children }) => {
   return (
-    <>
+    <div className="container">
       <Head>
         <title>Portfolio</title>
       </Head>
       <Navbar />
       {children}
       <Footer />
-    </>
+    </div>
   );
 };
 export default PrimaryLayout;

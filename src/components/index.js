@@ -36,4 +36,7 @@ export { PrimaryLayout } from './layouts/PrimaryLayout';
 export { withLayout } from './layouts/withLayout';
 export { ContactSection } from './sections/home/ContactSection';
 export { SkillSection } from './sections/home/SkillSection';
-export { ProjectSection } from './sections/home/ProjectSection';
+export { WorkSection } from './sections/home/WorkSection';
+export { MottoSection } from './sections/home/MottoSection';
+export { StorySection } from './sections/home/StorySection';
+export { Navigation } from './others/Navigation';

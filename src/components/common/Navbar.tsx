@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Link, { LinkProps } from 'next/link';
-import Links, { LinkIds } from '@enums';
+import Links from '@enums';
 import navbarStyles from '@/styles/components/Navbar.module.scss';
 import { HamburgerMenuSVG } from '../svg/common/HamburgerMenu';
 import { CloseSVG } from '../svg/common/Close';
@@ -17,7 +17,6 @@ export const NavItem = (props: NavItemProps & LinkProps) => {
 
 export enum ActiveTabType {
   HOME = 'HOME',
-  ABOUT = 'ABOUT',
   CONTACT = 'CONTACT',
 }
 
@@ -26,7 +25,7 @@ export const Navbar = () => {
   const getIsActive = (type: ActiveTabType) => {
     return activeTab === type ? navbarStyles['active-tab'] : '';
   };
-  const { HOME_PATH, ABOUT_PATH } = Links;
+  const { HOME_PATH } = Links;
 
   const toggleProps = {
     menuId: 'menu-wrapper',
@@ -94,26 +93,11 @@ export const Navbar = () => {
                 </button>
               </div>
             </Link>
-            <Link href={ABOUT_PATH}>
-              <div
-                role="presentation"
-                onClick={() => setActiveTab(ActiveTabType.ABOUT)}
-                className={`${navbarStyles['nav-item-wrapper']} `}
-              >
-                <button
-                  type="button"
-                  className={`${getIsActive(ActiveTabType.ABOUT)} ${
-                    navbarStyles['nav-item']
-                  }   `}
-                >
-                  <span> {ActiveTabType.ABOUT}</span>{' '}
-                </button>
-              </div>
-            </Link>
-            <Link href={`#${LinkIds.CONTACT_ID}`}>
+            <Link href={Links.CONTACT_PATH}>
               <div
                 role="presentation"
                 className={`${navbarStyles['nav-item-wrapper']}`}
+                onClick={() => setActiveTab(ActiveTabType.CONTACT)}
               >
                 <button
                   type="button"

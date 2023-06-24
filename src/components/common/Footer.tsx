@@ -4,7 +4,7 @@ import FooterStyles from '@/styles/components/Footer.module.scss';
 import Links from '../../enums/links';
 
 export const Footer = () => {
-  const { HOME_PATH, ABOUT_PATH, GITHUB_LINK } = Links;
+  const { HOME_PATH, CONTACT_PATH, GITHUB_LINK } = Links;
   return (
     <footer
       className={`${FooterStyles.footer} ${FooterStyles['footer-bg']}
@@ -18,8 +18,8 @@ export const Footer = () => {
           <Link href={HOME_PATH}>
             <p className={FooterStyles['footer-link']}>Home</p>
           </Link>
-          <Link href={ABOUT_PATH}>
-            <p className={FooterStyles['footer-link']}>About</p>
+          <Link href={CONTACT_PATH}>
+            <p className={FooterStyles['footer-link']}>Contact</p>
           </Link>
           <Link href={GITHUB_LINK}>
             <p className={FooterStyles['footer-link']}>GitHub</p>
