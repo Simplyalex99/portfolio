@@ -1,0 +1,105 @@
+mainSection:
+  subheading: I am Alex
+  headingAccent: Beautiful
+  heading: UI/UX
+  description: >
+    I’ve worked on different open-source projects and have earned contributor roles, I am ready to bring my skills and provide the best quality code and take ownership for what I build. I also enjoy many other hobbies from rock climbing,
+    canoeing and work on managing my time.
+  images: [/home/watch.png, /home/canoe.png, /home/hiking.png]
+workSection:
+  content:
+    - title: Softwareforlove
+      accent: spreading love
+      text: through software
+      description: >
+        Software For Love is a non-profit organization that focuses on providing software solutions
+        As a developer, I collobarated with other developers in fixing bugs and implementing mock up designs into production for their website and
+        mentor new developers.
+      imageUrl: /home/softwareforlove.png
+      linkUrl: https://github.com/Software-For-Love/software-for-love-site
+    - title: Oasis
+      accent: share experiences
+      text: with others
+      description: >
+        An open-source project of an online social media platform for developers to share their experience and find work easily. As a developer, I worked on both
+        the frontend and backend of the project using Next.js, TailwindCSS and TypeORM. I helped implement mock up designs,
+        refactor code, implement the backend authentication and fixed UI issues for different browser compatibility.
+      imageUrl: /home/oasis.png
+      linkUrl: https://github.com/Simplyalex99/oasis
+    - title: Review AI
+      description: >
+        A sentimental analysis app for businesses to identify new sales opportunities and monitor brand by having user reviews 
+        classified into positive and negative reviews.
+      imageUrl: /home/reviewai.png
+      linkUrl: https://github.com/TSharvananthan/Sentimentality
+      text: of customers
+      accent: discover feelings
+    - title: OpenReview
+      description: >
+        A dashboard app designed to help businesses save time and make decisions with the help of machine learning 
+        and natural language processing. The app identifies local competitors, predicts the sucess of the businesses
+        and provides sentimental analysis of customer reviews and more.
+      imageUrl: /home/openreview.png
+      linkUrl: https://github.com/Simplyalex99/OpenReview
+      accent: experience satisfication
+      text: through A.I
+skillSection:
+  description:
+    I love to learn new technologies and make an impact with what I learn and build. I am constantly learning new
+    technologies like ChatGPT to improve my workflow and provide faster and high quality code.
+  content:
+    - title: Machine Learning
+      description: I can build and deploy machine learning models from supervised, and unsupervised models and natural language processing
+      imageUrl: /icons/machine-learning.png
+    - title: UI/UX
+      description: I am familiar with design principles such as whitespace color and contrast and typography.
+      imageUrl: /icons/dobe-design.png
+    - title: Frontend
+      description: I can implement mock-up designs to code, and have knowledge of front-end/back-end technologies and responsive design.
+      imageUrl: /icons/php-code-bold.png
+    - title: Software Design
+      description: I have a good understanding of software best practices and tools to make scalable websites.
+      imageUrl: /icons/material-build-icon.png
+mottoSection:
+  content:
+    - title: Pixel Perfect
+      subheading: -01-
+      description: >
+        I focus on getting every aspect of design correct when implementing mockups into code and not just
+        code for the sake of coding or treat it as a chore but really take passion into what I am doing and have every 
+        part of a design perfect to the smallest pixel.
+      background: 'black'
+      color: white
+    - title: Beautiful
+      subheading: -02-
+      description: >
+        For me beautiful user interface and experience is not just a display of fancy designs but to build trust for the user and
+        the website, while providing them a soothing experience that will leave them an impression that they found
+        the service they have been looking for and can trust.
+      background: '#1D222F'
+      color: white
+    - title: Scalable
+      subheading: -03-
+      description: >
+        Whether it is a small brand to a simple personal project app, I always look at the bigger picture and think
+        what if we add this new feature or how will this app look in the next few months and 3 years? By implementing
+        software best practices and design patterns, this allows any app for businesses to grow and save time and money
+        without worrying what will happen to their app or why things go wrong.
+      background: 'white'
+      color: black
+storySection:
+  content:
+    - title: Education
+      imageUrl: /home/graduation.png
+      description: >
+        I initially studied computer science at York University and graduated with a Bachelor's degree.
+        During my studies in computer science at York University, I took many online certications like Udemy, and Mosh's Docker course to further
+        improve my coding skills, and learned about data structures, design patterns and machine learning.
+    - title: Learning
+      imageUrl: /home/learning.png
+      description: >
+        As a self taught developer, I am constantly learning new UI/UX trends, and technologies to widen my range of skills
+        and provide valuable help for growing businesses. I am eager to showcase my skills and to use them in a career that I enjoy.
+        Over the years, I learned how to learn when it comes to new technologies and how to approach and debug problems  even when
+        there may be no solution or is a first-timer. Working with other developers also helped me to grow and understand how 
+        senior developers approach problems.
