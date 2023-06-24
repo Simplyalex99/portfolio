@@ -1,9 +1,9 @@
 import React, { useRef } from 'react';
-import homeStyles from '@/styles/pages/Home.module.scss';
+import homeStyles from '@/styles/pages/Contact.module.scss';
 import Link from 'next/link';
 import { useForm } from 'react-hook-form';
 import tokens from '@/config';
-import Links, { LinkIds } from '@/src/enums/links';
+import Links from '@/src/enums/links';
 import emailjs from '@emailjs/browser';
 import { Button } from '../../common/Button';
 import { DownLeftArrowSVG } from '../../svg/arrows/DownLeftArrow';
@@ -55,10 +55,7 @@ export const ContactSection = () => {
 
   const { MEDIUM_LINK, GITHUB_LINK, LINKEDIN_LINK } = Links;
   return (
-    <section
-      className={`${homeStyles['contact-section']} wrapper`}
-      id={LinkIds.CONTACT_ID}
-    >
+    <section className={`${homeStyles['contact-section']} wrapper`}>
       <div className={homeStyles['blob-sm-wrapper']}>
         <SmallAbstractSVG />
       </div>
