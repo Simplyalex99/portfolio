@@ -10,7 +10,7 @@ import {
   MottoSection,
   StorySection,
 } from '@/components';
-import yaml from '@/templates/about.yaml';
+import yaml from '@/templates/home.yaml';
 import { useParallax } from '@/src/hooks';
 import homeStyles from '@/styles/pages/Home.module.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';

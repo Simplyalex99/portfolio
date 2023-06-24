@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import homeStyles from '@/styles/components/Skill.module.scss';
-import yaml from '@/templates/about.yaml';
+import yaml from '@/templates/home.yaml';
 import { getPaginationHelper } from '@/utils';
 import { LinkIds } from '@/src/enums/links';
 import { createPaginationTheme } from '../../utils/PaginationComponent';

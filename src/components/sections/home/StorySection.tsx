@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import storyStyles from '@/styles/components/Story.module.scss';
-import yaml from '@/templates/about.yaml';
+import yaml from '@/templates/home.yaml';
 import { getPaginationHelper } from '@/utils';
 import { LinkIds } from '@/src/enums/links';
 import { Pagination } from '../../utils/PaginationComponent';

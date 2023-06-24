@@ -1,6 +1,6 @@
 import mottoStyles from '@/styles/components/Motto.module.scss';
 import { LinkIds } from '@/src/enums/links';
-import yaml from '@/templates/about.yaml';
+import yaml from '@/templates/home.yaml';
 
 export const MottoSection = () => {
   const { content } = yaml.mottoSection;

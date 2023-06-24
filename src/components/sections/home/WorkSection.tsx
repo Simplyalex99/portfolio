@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import homeStyles from '@/styles/components/Work.module.scss';
 import { getPaginationHelper } from '@/utils';
-import yaml from '@/templates/about.yaml';
+import yaml from '@/templates/home.yaml';
 import { LinkIds } from '@/src/enums/links';
 import { Button } from '../../common/Button';
 import { Pagination } from '../../utils/PaginationComponent';
