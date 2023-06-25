@@ -43,9 +43,7 @@ export const ContactSection = () => {
     const formData = data as FormProps;
     console.log(`${SERVICE_ID} ${TEMPLATE_ID}`);
     emailjs.send(SERVICE_ID, TEMPLATE_ID, formData, API_KEY).then(
-      (result) => {
-        console.log(result.text);
-      },
+      () => {},
       (error) => {
         console.log(error.text);
       }
