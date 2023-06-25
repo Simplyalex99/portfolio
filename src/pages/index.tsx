@@ -78,7 +78,7 @@ export const About = () => {
           <div className={homeStyles['carousel-wrapper']}>
             <Swiper
               modules={[Autoplay]}
-              autoplay={{ delay: 5000, disableOnInteraction: false }}
+              autoplay={{ delay: 3000, disableOnInteraction: false }}
               loop
             >
               {images.map((src) => {
