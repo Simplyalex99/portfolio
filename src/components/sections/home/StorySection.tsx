@@ -22,7 +22,6 @@ export const StorySection = () => {
   const pageHandler = (page: number) => {
     setCurrentPage(page);
   };
-  console.log(content);
   return (
     <section
       className={`wrapper ${storyStyles['story-section']}`}
