@@ -28,19 +28,34 @@
     .widget {
       padding-top: 12em;
       padding-bottom: 12em;
+
       .wrapper {
         text-align: center;
+        [data-scroll] {
+          transition: all 2s;
+        }
+        [data-scroll='in'] {
+          opacity: 1;
+          transform: translateX(0);
+        }
+        [data-scroll='out'] {
+          opacity: 0;
+          transform: translateX(-200px);
+        }
         .title {
           font-weight: 400;
           font-family: 'Playfair Display SC';
           font-size: 4rem;
           margin-top: 0;
+          position: relative;
         }
         .subheading {
           margin: 0;
+          position: relative;
         }
         .description {
           margin: 0;
+          position: relative;
         }
       }
     }

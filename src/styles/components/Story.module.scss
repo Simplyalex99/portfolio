@@ -70,6 +70,17 @@
     .container {
       display: grid;
       margin: 0 auto;
+      [data-scroll] {
+        transition: all 2s;
+      }
+      [data-scroll='in'] {
+        opacity: 1;
+        transform: translateX(0);
+      }
+      [data-scroll='out'] {
+        opacity: 0;
+        transform: translateX(-100px);
+      }
       .grid-container {
         margin-bottom: 4em;
         display: grid;
