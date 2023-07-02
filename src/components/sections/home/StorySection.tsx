@@ -68,7 +68,11 @@ export const StorySection = () => {
         {content.map((data) => {
           const { imageUrl, title, description } = data;
           return (
-            <div className={storyStyles['grid-container']} key={title}>
+            <div
+              className={storyStyles['grid-container']}
+              key={title}
+              data-scroll
+            >
               <Image
                 alt="education and learning"
                 src={imageUrl}
