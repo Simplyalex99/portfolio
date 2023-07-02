@@ -26,9 +26,15 @@ export const MottoSection = () => {
               }}
             >
               <div className={`wrapper mg-top-0 ${mottoStyles.wrapper}`}>
-                <p className={mottoStyles.subheading}>{data.subheading}</p>
-                <h2 className={mottoStyles.title}>{data.title}</h2>
-                <p className={mottoStyles.description}>{data.description}</p>
+                <p className={mottoStyles.subheading} data-scroll>
+                  {data.subheading}
+                </p>
+                <h2 className={mottoStyles.title} data-scroll>
+                  {data.title}
+                </h2>
+                <p className={mottoStyles.description} data-scroll>
+                  {data.description}
+                </p>
               </div>
             </div>
           );

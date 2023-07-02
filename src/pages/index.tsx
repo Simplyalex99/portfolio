@@ -12,7 +12,7 @@ import {
   LineArtSVG,
 } from '@/components';
 import yaml from '@/templates/home.yaml';
-import { useParallax, useScrollAnimation } from '@/src/hooks';
+import { useParallax, useScrollAnimation, useScrollOut } from '@/src/hooks';
 import homeStyles from '@/styles/pages/Home.module.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper';
@@ -39,6 +39,7 @@ export const About = () => {
       element.style.width = '100px';
     }
   };
+  useScrollOut({ options: { once: true } });
   useParallax();
   useScrollAnimation(svgId, lineArtPathId);
   return (
