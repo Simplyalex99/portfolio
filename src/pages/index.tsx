@@ -50,7 +50,11 @@ export const About = () => {
       <div className="wrapper">
         <SEO title="about Alex" />
         <section className={homeStyles.hero}>
-          <div className={homeStyles['hero-content']}>
+          <div
+            className={`scroll ${homeStyles['hero-content']}`}
+            data-rate="-.3"
+            data-direction="horizontal"
+          >
             <div className={homeStyles['heading-wrapper']}>
               <p className={homeStyles['hero-subheading']}>{data.subheading}</p>
               <h2 className={homeStyles['hero-heading']}>
@@ -76,7 +80,11 @@ export const About = () => {
             </div>
           </div>
 
-          <div className={homeStyles['carousel-wrapper']}>
+          <div
+            className={`${homeStyles['carousel-wrapper']} scroll`}
+            data-rate="-.2"
+            data-direction="vertical"
+          >
             <Swiper
               modules={[Autoplay]}
               autoplay={{ delay: 3000, disableOnInteraction: false }}
@@ -100,7 +108,11 @@ export const About = () => {
               })}
             </Swiper>
           </div>
-          <div className={homeStyles.navigation}>
+          <div
+            className={`scroll ${homeStyles.navigation}`}
+            data-rate=".3"
+            data-direction="horizontal"
+          >
             <Navigation />
           </div>
         </section>

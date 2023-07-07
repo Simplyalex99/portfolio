@@ -15,6 +15,8 @@ export const useParallax = () => {
         const position = window.pageYOffset * rate;
         if (element.dataset.direction === 'vertical') {
           element.style.transform = `translate3d(0px,${position}px,0px)`;
+        } else if (element.dataset.direction === 'horizontal') {
+          element.style.transform = `translate3d(${position}px,0px,0px)`;
         } else {
           let ratex = 0;
           if (element?.dataset?.ratex) {
