@@ -82,7 +82,7 @@ export const About = () => {
 
           <div
             className={`${homeStyles['carousel-wrapper']} scroll`}
-            data-rate="-.2"
+            data-rate="-.3"
             data-direction="vertical"
           >
             <Swiper
