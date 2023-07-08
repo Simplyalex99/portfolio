@@ -35,9 +35,14 @@
       .work-img-wrapper {
         margin-bottom: 10em;
         height: 300px;
+        .img-zoom {
+          height: 100%;
+          width: 100%;
+        }
         .work-heading {
           margin: 0;
           position: absolute;
+          z-index: 3;
           font-size: 3rem;
           color: white;
           transform: translateY(190px);
@@ -97,7 +102,19 @@
           grid-column-start: 1;
           grid-column-end: -1;
           margin-bottom: 3em;
+          .img-zoom {
+            overflow: hidden;
+            z-index: 2;
+            position: relative;
+          }
+          .img-zoom .work-img {
+            transition: transform 0.5s ease;
+          }
+          .img-zoom:hover .work-img {
+            transform: scale(1.1);
+          }
         }
+
         .work-link-wrapper {
           grid-column-start: 1;
           grid-column-end: 3;

@@ -44,14 +44,16 @@ export const WorkSection = () => {
                   {accent}
                   <span className={homeStyles['work-accent']}>{text}</span>
                 </h2>
-                <Image
-                  alt="open source"
-                  src={imageUrl}
-                  width={50}
-                  height={50}
-                  className={homeStyles['work-img']}
-                  unoptimized
-                />
+                <div className={homeStyles['img-zoom']}>
+                  <Image
+                    alt="open source"
+                    src={imageUrl}
+                    width={50}
+                    height={50}
+                    className={homeStyles['work-img']}
+                    unoptimized
+                  />
+                </div>
               </div>
               <div className={homeStyles['work-text-content']}>
                 <p className={homeStyles['work-title']}>{title}</p>

@@ -73,14 +73,16 @@ export const StorySection = () => {
               key={title}
               data-scroll
             >
-              <Image
-                alt="education and learning"
-                src={imageUrl}
-                width={50}
-                height={50}
-                unoptimized
-                className={storyStyles['story-img']}
-              />
+              <div className={storyStyles['img-zoom']}>
+                <Image
+                  alt="education and learning"
+                  src={imageUrl}
+                  width={50}
+                  height={50}
+                  unoptimized
+                  className={storyStyles['story-img']}
+                />
+              </div>
               <div className={storyStyles['content-wrapper']}>
                 <h2 className={storyStyles.title}>{title}</h2>
                 <p className={storyStyles.description}>{description}</p>

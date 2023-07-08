@@ -26,17 +26,31 @@ export const About = () => {
   const imageId = 'carousel';
   const svgId = 'scroll-svg';
   const lineArtPathId = 'scroll-line';
-  const onMouseOverHandler = () => {
+  const onMouseOverButton = () => {
     const element = document.getElementById('arrow-btn');
     if (element) {
       element.style.width = '120px';
       element.style.transition = '0.5s ease';
     }
   };
-  const onMouseLeaveHandler = () => {
+  const onMouseLeaveButton = () => {
     const element = document.getElementById('arrow-btn');
     if (element) {
       element.style.width = '100px';
+    }
+  };
+  const onMouseOverCarousel = () => {
+    const element = document.getElementById('hero-heading');
+    const className = homeStyles['stroke-effect'];
+    if (element) {
+      element.classList.add(className);
+    }
+  };
+  const onMouseLeaveCarousel = () => {
+    const element = document.getElementById('hero-heading');
+    const className = homeStyles['stroke-effect'];
+    if (element) {
+      element.classList.remove(className);
     }
   };
   useScrollOut({ options: { once: true } });
@@ -57,7 +71,7 @@ export const About = () => {
           >
             <div className={homeStyles['heading-wrapper']}>
               <p className={homeStyles['hero-subheading']}>{data.subheading}</p>
-              <h2 className={homeStyles['hero-heading']}>
+              <h2 className={homeStyles['hero-heading']} id="hero-heading">
                 <span>{data.headingAccent}</span>
                 <br />
                 {data.heading}
@@ -67,8 +81,8 @@ export const About = () => {
             <div
               className={homeStyles['action-btn-wrapper']}
               onFocus={() => undefined}
-              onMouseOver={onMouseOverHandler}
-              onMouseLeave={onMouseLeaveHandler}
+              onMouseOver={onMouseOverButton}
+              onMouseLeave={onMouseLeaveButton}
             >
               <RightArrowSVG width={100} id="arrow-btn" />
               <Link
@@ -84,6 +98,9 @@ export const About = () => {
             className={`${homeStyles['carousel-wrapper']} scroll`}
             data-rate="-.3"
             data-direction="vertical"
+            onMouseOver={onMouseOverCarousel}
+            onMouseLeave={onMouseLeaveCarousel}
+            onFocus={() => undefined}
           >
             <Swiper
               modules={[Autoplay]}
