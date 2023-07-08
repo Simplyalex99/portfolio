@@ -86,13 +86,20 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 100px;
-        .story-img {
-          object-fit: cover;
+        .img-zoom {
+          overflow: hidden;
+          .story-img {
+            object-fit: cover;
 
-          height: 600px !important;
-          width: 100%;
-          max-width: 400px !important;
-          margin: 0 auto;
+            height: 600px !important;
+            width: 100%;
+            max-width: 400px !important;
+            margin: 0 auto;
+            transition: transform 0.5s ease;
+          }
+        }
+        .img-zoom:hover .story-img {
+          transform: scale(1.1);
         }
         .content-wrapper {
           text-align: left;
