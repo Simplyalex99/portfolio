@@ -4,7 +4,7 @@ import navStyles from '@/styles/components/Navigation.module.scss';
 
 const Links: Array<{ text: string; url: string }> = [
   { text: 'Contributions & Projects', url: LinkIds.WORK_ID },
-  { text: 'My Motto', url: LinkIds.MOTTO_ID },
+  { text: 'Why hire me?', url: LinkIds.MOTTO_ID },
   { text: 'My Story', url: LinkIds.STORY_ID },
   { text: 'My Skills', url: LinkIds.SKILLS_ID },
 ];
