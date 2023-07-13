@@ -13,7 +13,7 @@ export const MottoSection = () => {
       >
         <p className={`${mottoStyles.watermark}`}>Brand</p>
       </div>
-      <p className={mottoStyles['section-heading']}>My motto</p>
+      <p className={mottoStyles['section-heading']}>Why me?</p>
       <div className={mottoStyles['grid-container']}>
         {content.map((data) => {
           return (
