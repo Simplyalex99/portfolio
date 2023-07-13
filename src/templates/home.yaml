@@ -89,7 +89,7 @@ mottoSection:
       color: black
 storySection:
   content:
-    - title: Education
+    - title: School
       imageUrl: /home/graduation.png
       description: >
         I initially studied computer science at York University and graduated with a Bachelor's degree.
